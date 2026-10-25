@@ -1,0 +1,15 @@
+{
+  "name": "Chemistry & Biology Study",
+  "short_name": "Chem & Bio",
+  "description": "Offline chemistry & biology practice questions with grading and review.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b1016",
+  "theme_color": "#1f8aa6",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
