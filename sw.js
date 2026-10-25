@@ -1,6 +1,6 @@
 /* Service worker — caches the app shell so it works offline after the first load.
    Only active when the app is served over http(s) (a hosted or localhost copy). */
-var CACHE = "chembio-v2";
+var CACHE = "chembio-v3";
 var ASSETS = [
   "./", "index.html", "styles.css", "app.js", "questions.js",
   "manifest.json", "icon-192.png", "icon-512.png", "bg.jpg"
