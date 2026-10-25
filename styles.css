@@ -278,9 +278,10 @@ select:focus,input:focus{outline:3px solid var(--brand);outline-offset:1px;borde
 }
 
 /* ===== Science background image (light theme). Save bg.jpg in this folder. ===== */
-body{ background: var(--ground) url("bg.jpg") no-repeat center top fixed; background-size: cover; }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) body{ background: var(--ground); } }
-:root[data-theme="dark"] body{ background: var(--ground); }
+body{ background: var(--ground); }
+body::before{ content:""; position:fixed; inset:0; z-index:-1; background:url("bg.jpg") no-repeat center center; background-size:cover; }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) body::before{ display:none; } }
+:root[data-theme="dark"] body::before{ display:none; }
 /* keep loose text readable over the image */
 .foot, .selftest{ background: rgba(255,255,255,.72); border-radius:10px; padding:10px 14px; }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .foot, :root:not([data-theme="light"]) .selftest{ background:transparent; } }
