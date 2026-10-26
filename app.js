@@ -527,9 +527,47 @@
 
   // ---------- Screen switching ----------
   function showScreen(id) {
-    ["homeScreen", "quizScreen", "resultScreen"].forEach(function (s) { $(s).classList.toggle("active", s === id); });
+    ["homeScreen", "quizScreen", "resultScreen", "studyScreen"].forEach(function (s) { var el = $(s); if (el) el.classList.toggle("active", s === id); });
     window.scrollTo(0, 0);
     if (id === "homeScreen") { refreshHistoryUI(); refreshMissedUI(); checkResume(); }
+  }
+
+  // ---------- Study material ----------
+  var currentStudyPractice = null;
+  function buildStudyList() {
+    var box = $("studyList"); if (!box || typeof window.STUDY_DATA === "undefined") return;
+    box.innerHTML = "";
+    window.STUDY_DATA.forEach(function (s, idx) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "testcard";
+      b.innerHTML = '<span class="tname"></span><span class="tdesc"></span>';
+      b.querySelector(".tname").textContent = s.sub || ("Section " + (idx + 1));
+      b.querySelector(".tdesc").textContent = s.title;
+      b.addEventListener("click", function () { openStudy(idx); });
+      box.appendChild(b);
+    });
+  }
+  function openStudy(idx) {
+    var s = window.STUDY_DATA[idx]; if (!s) return;
+    $("studyTitle").textContent = s.title;
+    var body = $("studyBody"); body.innerHTML = "";
+    (s.sections || []).forEach(function (sec) {
+      var h = document.createElement("h3"); h.textContent = sec.h; body.appendChild(h);
+      var ul = document.createElement("ul");
+      (sec.items || []).forEach(function (it) { var li = document.createElement("li"); li.textContent = it; ul.appendChild(li); });
+      body.appendChild(ul);
+    });
+    currentStudyPractice = s.practiceSub || null;
+    var pb = $("studyPracticeBtn");
+    if (currentStudyPractice) { pb.hidden = false; pb.textContent = "Practice: " + currentStudyPractice; }
+    else { pb.hidden = true; }
+    $("navbar").hidden = true; $("timer").hidden = true; $("answeredStat").hidden = true;
+    showScreen("studyScreen");
+  }
+  function practiceFromStudy() {
+    if (!currentStudyPractice) return;
+    var items = DATA.filter(function (x) { return x.sub === currentStudyPractice; });
+    startTest(items, currentStudyPractice, { timed: false });
   }
   function goHome() {
     stopTimer(); session = null;
@@ -560,8 +598,13 @@
     runDataAudit();
     runSelfTests();
     buildSubjectDropdown();
+    buildStudyList();
     setModeUI();
     showScreen("homeScreen");
+
+    if ($("studyPracticeBtn")) $("studyPracticeBtn").addEventListener("click", practiceFromStudy);
+    if ($("studyBackBtn")) $("studyBackBtn").addEventListener("click", goHome);
+    if ($("studyBackBtn2")) $("studyBackBtn2").addEventListener("click", goHome);
 
     $("modePractice").addEventListener("click", function () { setMode("practice"); });
     $("modeExam").addEventListener("click", function () { setMode("exam"); });

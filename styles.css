@@ -286,3 +286,6 @@ body::before{ content:""; position:fixed; inset:0; z-index:-1; background:url("b
 .foot, .selftest{ background: rgba(255,255,255,.72); border-radius:10px; padding:10px 14px; }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .foot, :root:not([data-theme="light"]) .selftest{ background:transparent; } }
 :root[data-theme="dark"] .foot, :root[data-theme="dark"] .selftest{ background:transparent; }
+.studybody h3{margin:18px 0 6px;color:var(--brand-deep);font-size:1.06rem}
+.studybody ul{margin:0 0 10px;padding-left:22px}
+.studybody li{margin:7px 0;line-height:1.5}

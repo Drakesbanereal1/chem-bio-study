@@ -13,7 +13,7 @@
 <meta name="apple-mobile-web-app-title" content="Chem &amp; Bio">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -42,6 +42,12 @@
     <div class="txt" id="resumeText"></div>
     <button class="btn btn-primary" id="resumeBtn">Resume</button>
     <button class="btn btn-ghost" id="discardBtn">Discard</button>
+  </div>
+
+  <div class="card">
+    <h2 class="sect"><span class="ic">S</span>Study material</h2>
+    <p class="small muted">Read the notes for each chapter, then jump into practice on that exact section. No internet needed.</p>
+    <div class="testgrid" id="studyList"></div>
   </div>
 
   <div class="card">
@@ -181,6 +187,19 @@
   </div>
 </section>
 
+<!-- ===== STUDY ===== -->
+<section class="screen" id="studyScreen">
+  <div class="card">
+    <button class="btn btn-ghost" id="studyBackBtn">&larr; Back to menu</button>
+    <h1 class="title" id="studyTitle" style="margin-top:10px"></h1>
+    <div id="studyBody" class="studybody"></div>
+    <div class="actions" style="margin-top:16px">
+      <button class="btn btn-primary" id="studyPracticeBtn">Practice this chapter</button>
+      <button class="btn btn-ghost" id="studyBackBtn2">Back to menu</button>
+    </div>
+  </div>
+</section>
+
 </div>
 
 <!-- ===== Palette drawer ===== -->
@@ -217,8 +236,9 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="questions.js?v=7"></script>
-<script src="app.js?v=4"></script>
+<script src="questions.js?v=8"></script>
+<script src="study.js?v=8"></script>
+<script src="app.js?v=8"></script>
 <script>
   /* Offline PWA support — only registers when served over http(s); harmless on file:// */
   if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
