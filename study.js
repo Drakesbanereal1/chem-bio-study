@@ -25,8 +25,9 @@ window.STUDY_DATA = [
     "Hydrocarbons are mostly nonpolar and poorly water-soluble; an alcohol can hydrogen-bond and dissolve.",
     "cis = comparable groups on the same side of C=C; trans = opposite sides. Needs a double bond (restricted rotation); no cis/trans in rings.",
     "Structural isomers: same molecular formula, different connectivity." ]},
-  { h:"Formula patterns", items:[
-    "Acyclic alkane: CnH(2n+2).   One C=C: CnH(2n).   One C#C: CnH(2n-2)." ]}
+  { h:"Formula patterns & degree of unsaturation", items:[
+    "Acyclic alkane: CnH(2n+2).   One C=C: CnH(2n).   One C#C: CnH(2n-2).   Monocyclic alkane (one ring): CnH(2n).",
+    "Degree of unsaturation: each ring = 1, each C=C = 1, each C#C = 2, each benzene ring = 4." ]}
 ]},
 
 { id:"S14", title:"Ch 14 - Alcohols, Oxidation, Sulfur & Chirality", sub:"Chapter 14",
@@ -79,8 +80,11 @@ window.STUDY_DATA = [
     "Fischer: -OH on the bottom (penultimate) chiral carbon on the right = a D sugar." ]},
   { h:"Reducing sugars & glycosidic bonds", items:[
     "A free anomeric carbon can open to a carbonyl, so the sugar is reducing. Maltose and lactose are reducing; sucrose is nonreducing.",
+    "Reducing-sugar tests: Benedict's gives a brick-red Cu2O precipitate; Tollens' gives a silver mirror. Both are positive for aldehydes/reducing sugars, not simple ketones.",
+    "Mutarotation: the ring opens and recloses, letting the alpha and beta anomers interconvert.",
+    "Reducing the carbonyl of a sugar gives a sugar alcohol.",
     "Glycosidic bond: an oxygen bridge joining two sugars. Condensation releases water; hydrolysis adds water and splits them.",
-    "mono = 1 unit, di = 2 units, poly = many units." ]}
+    "Joining m units forms m-1 glycosidic bonds; 2 glucose -> C12H22O11 + H2O.  mono = 1, di = 2, poly = many." ]}
 ]},
 
 { id:"SMAP", title:"Reaction Decision Map (all chapters)", sub:"Quick review",
