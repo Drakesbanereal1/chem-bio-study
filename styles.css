@@ -45,7 +45,7 @@ body{
 }
 .mono{font-variant-numeric:tabular-nums}
 h1,h2,h3{margin:0;line-height:1.2}
-button{font-family:inherit;cursor:pointer}
+button{font-family:inherit;cursor:pointer;color:var(--ink)}
 .wrap{max-width:880px;margin:0 auto;padding:0 18px 100px}
 .hidden{display:none !important}
 a{color:var(--brand)}
