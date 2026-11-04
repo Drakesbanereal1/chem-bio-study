@@ -113,6 +113,94 @@ window.STUDY_DATA = [
     "Temperature: K = deg C + 273.15.    Density = mass / volume.",
     "Moles: n = mass / molar mass.    Mole ratio comes from balanced coefficients.",
     "pH = -log[H3O+];  pH + pOH = 14.    Dilution: C1V1 = C2V2.    Gas: PV = nRT (R = 0.082057)." ]}
+]},
+
+/* ================= BIOLOGY — BIOL 260 Chapters 7-10 ================= */
+
+{ id:"SB7", title:"Bio Ch 7 - Gene Expression & the lac Operon", sub:"Biology Chapter 7",
+  practiceSub:"Bio Ch 7: Gene Expression & lac Operon", sections:[
+  { h:"DNA to protein: three processes", items:[
+    "Replication: DNA -> DNA (semiconservative; each daughter duplex keeps one old strand).",
+    "Transcription: DNA -> RNA (RNA polymerase starts at a promoter; sigma factors help bacterial promoter recognition).",
+    "Translation: mRNA -> protein (ribosomes read codons; tRNAs deliver amino acids).",
+    "Both DNA and RNA polymerases build 5' -> 3'." ]},
+  { h:"Replication enzymes", items:[
+    "Helicase: unzip.  Primase: RNA primer.  DNA polymerase: extend from a free 3' OH.  Ligase: seal fragments.  Gyrase: relieve twisting.",
+    "Leading strand is continuous; lagging strand uses Okazaki fragments." ]},
+  { h:"Translation landmarks", items:[
+    "Codon = 3 bases on mRNA; anticodon is on tRNA.",
+    "AUG usually starts; UAA, UAG, UGA are stop codons. Amino acids are joined by peptide bonds.",
+    "Ribosome sites: A = arrival, P = peptide (initiator tRNA starts here), E = exit." ]},
+  { h:"The lac operon (two controls)", items:[
+    "Parts: promoter (RNA polymerase start), operator (regulatory site), repressor (blocks), activator CAP-cAMP (helps). lacI makes the repressor; lacZ, lacY, lacA are the structural genes.",
+    "Lactose absent -> OFF (repressor bound). Lactose present + glucose low -> HIGH.",
+    "Allolactose (from lactose) inactivates the repressor. Low glucose -> high cAMP -> CAP-cAMP activates.",
+    "Memory: lactose unlocks the gate; low glucose presses the accelerator." ]},
+  { h:"Sigma factors & bacteria vs eukaryotes", items:[
+    "An alternative sigma factor redirects RNA polymerase to a new set of promoters (a coordinated response) without changing the DNA.",
+    "Bacteria: no nucleus, coupled transcription/translation, 70S ribosomes, operons.  Eukaryotes: nuclear transcription, 80S ribosomes, mRNA splicing (introns out, exons kept).",
+    "DNA math: A pairs with T, G with C. If T = 20%, then C = 30%." ]}
+]},
+
+{ id:"SB8", title:"Bio Ch 8 - Genetics, Mutation & Gene Transfer", sub:"Biology Chapter 8",
+  practiceSub:"Bio Ch 8: Genetics, Mutation & Gene Transfer", sections:[
+  { h:"Mutations (same / swap / stop / shift)", items:[
+    "Silent (synonymous): same amino acid.  Missense: different amino acid.  Nonsense: early STOP.  Frameshift: an insertion/deletion not divisible by 3.",
+    "A 3-base indel adds/removes an amino acid but preserves the reading frame.",
+    "Genotype = genetic makeup; phenotype = observable result. A reversion restores the phenotype (true back mutation vs a suppressor)." ]},
+  { h:"Mutagens & repair", items:[
+    "UV -> adjacent pyrimidine (thymine) dimers.  Base analog (5-bromouracil) = a fake T that can mispair.  Intercalators can cause indels.",
+    "Repair: proofreading (3' -> 5' exonuclease), mismatch repair, nucleotide excision (remove, fill, seal)." ]},
+  { h:"Prototroph vs auxotroph & replica plating", items:[
+    "Prototroph: grows on minimal medium (GSA). Auxotroph: needs an added nutrient (e.g., Leu- needs leucine).",
+    "Find auxotrophs by comparing the SAME colony position across plates: absence on GSA + rescue when the nutrient is added.",
+    "Memory: no growth can mean starvation OR drug inhibition - check the nutrient before judging resistance." ]},
+  { h:"Three ways DNA moves (horizontal transfer)", items:[
+    "Transformation: a competent cell takes up naked environmental DNA.",
+    "Transduction (phage): generalized = random packaging error; specialized = adjacent genes leave with an integrated prophage.",
+    "Conjugation: DNA transfer by direct contact (often a plasmid). F+ donor, F- recipient, Hfr = F integrated, R plasmid = resistance, transposon = mobile/disruptive DNA." ]},
+  { h:"Selection & the Ames test", items:[
+    "Antibiotics SELECT pre-existing resistant variants; they do not create the exact needed mutation.",
+    "Ames test: compare chemical-treated revertants to an untreated control. Many more revertants supports mutagenicity.",
+    "Mutagen = causes mutations; carcinogen = causes cancer. A positive Ames result does not by itself prove human cancer." ]}
+]},
+
+{ id:"SB9", title:"Bio Ch 9 - Biotechnology (PCR, Cloning, Sequencing)", sub:"Biology Chapter 9",
+  practiceSub:"Bio Ch 9: Biotechnology (PCR, Cloning, Sequencing)", sections:[
+  { h:"PCR: separate, stick, synthesize", items:[
+    "Denature ~95 deg C (strands separate) -> Anneal ~50 deg C (primers bind) -> Extend ~72 deg C (Taq builds DNA 5' -> 3').",
+    "Ingredients: template, two primers, thermostable polymerase (Taq), dNTPs, buffer/Mg2+. No ligase, helicase or primase needed.",
+    "Copies: N = N0 x 2^cycles. From one duplex, 3 cycles -> 8 total duplexes." ]},
+  { h:"Tools (do not mix them up) & cloning", items:[
+    "Restriction enzyme = cut.  Ligase = seal.  Gel = size.  PCR = copy.  Sequencing = read bases.  Probe = find a matching sequence.",
+    "Cloning order: extract DNA -> cut DNA and vector -> ligate the insert -> introduce into a host -> select, then verify.",
+    "Selection trap: surviving an antibiotic means the cell has the resistance marker, NOT that it has the desired insert." ]},
+  { h:"cDNA, Sanger & gels", items:[
+    "Reverse transcriptase makes cDNA (DNA) from RNA; mature-mRNA cDNA lacks the spliced-out introns.",
+    "Sanger: a ddNTP lacks a 3' OH, so extension stops; one primer per reaction; read shortest -> longest.",
+    "Gel: DNA is negative and migrates toward the + electrode; smaller linear fragments travel farther." ]},
+  { h:"Microarrays & cloning a useful protein", items:[
+    "Expression microarray colors: reference = green, experimental = red. Red = higher experimental, yellow = both, dark = little signal. A transcript signal is NOT a direct protein count.",
+    "Insulin example: put an intron-free human coding sequence with bacterial expression controls into E. coli; the shared genetic code lets bacterial ribosomes read it (active protein also needs processing/purification)." ]}
+]},
+
+{ id:"SB10", title:"Bio Ch 10 - Classification & Identification", sub:"Biology Chapter 10",
+  practiceSub:"Bio Ch 10: Classification & Identification", sections:[
+  { h:"Three big tasks & evidence", items:[
+    "Classification = group organisms. Identification = assign an unknown to a group. Strain typing = distinguish variants.",
+    "Three domains: Bacteria, Archaea, Eukarya (based on small-subunit / 16S rRNA).",
+    "Phenotypic: Gram stain, shape, colony, metabolism/enzyme tests (catalase, oxidase, coagulase, lactose). Genotypic: 16S rRNA sequence, DNA probe, DNA hybridization, G+C content, genome comparison." ]},
+  { h:"Five ways to type a strain", items:[
+    "Biochemical = metabolism.  Serological = antigens via antibodies.  Molecular = DNA patterns.  Phage = virus susceptibility.  Antibiogram = antibiotic susceptibility pattern.",
+    "Similar disease or habitat alone does NOT prove close evolutionary relatedness." ]},
+  { h:"Reading the dichotomous key & tests", items:[
+    "Gram- rod, oxidase + -> Pseudomonas aeruginosa.  Gram- rod, oxidase -, lactose acid/gas + -> E. coli or another coliform.  Gram- rod, oxidase -, lactose - -> Proteus.",
+    "Gram+ coccus, catalase - -> Enterococcus.  catalase +, coagulase + -> S. aureus.  catalase +, coagulase - -> S. saprophyticus.",
+    "Catalase: bubbles when H2O2 is added (O2).  Oxidase: color = cytochrome oxidase.  Lactose: acid lowers pH, gas = fermentation.  Coagulase: clot." ]},
+  { h:"Molecular clues", items:[
+    "16S rRNA gene: a bacterial marker (conserved + variable regions). Higher G+C generally means a higher DNA melting temperature.",
+    "An identical short 16S does NOT prove the same strain - combine sequence quality, coverage and phenotype.",
+    "BLAST finds similar database sequences; Clustal aligns multiple sequences. A top hit is evidence, not automatic proof." ]}
 ]}
 
 ];
