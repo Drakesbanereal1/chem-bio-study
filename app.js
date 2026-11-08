@@ -553,9 +553,16 @@
     var body = $("studyBody"); body.innerHTML = "";
     (s.sections || []).forEach(function (sec) {
       var h = document.createElement("h3"); h.textContent = sec.h; body.appendChild(h);
+      if (sec.fig) {
+        var fig = document.createElement("figure"); fig.className = "studyfig";
+        var box = document.createElement("div"); box.className = "studyfig-img"; box.innerHTML = sec.fig;
+        fig.appendChild(box);
+        if (sec.figcap) { var fc = document.createElement("figcaption"); fc.textContent = sec.figcap; fig.appendChild(fc); }
+        body.appendChild(fig);
+      }
       var ul = document.createElement("ul");
       (sec.items || []).forEach(function (it) { var li = document.createElement("li"); li.textContent = it; ul.appendChild(li); });
-      body.appendChild(ul);
+      if (ul.children.length) body.appendChild(ul);
     });
     currentStudyPractice = s.practiceSub || null;
     var pb = $("studyPracticeBtn");
