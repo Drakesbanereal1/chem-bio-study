@@ -5,7 +5,7 @@
        from sticking around after an update.
      - Images/icons (png, jpg, webp): CACHE-FIRST (they rarely change and are big).
    Only active when served over http(s) (a hosted or localhost copy). */
-var CACHE = "chembio-v12";
+var CACHE = "chembio-v13";
 var ASSETS = [
   "./", "index.html", "styles.css", "app.js", "questions.js", "study.js",
   "manifest.json", "icon-192.png", "icon-512.png", "bg.jpg"
