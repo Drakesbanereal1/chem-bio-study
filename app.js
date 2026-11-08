@@ -118,6 +118,70 @@
   var reviewFilter = "all";
   var lastResult = null;
 
+  // ---------- Subject / chapter / topic taxonomy (drives navigation) ----------
+  var TAXONOMY = {
+    chem: { label: "Chemistry", chapters: [
+      { id:"ch13", label:"Chapter 13 - Organic Structures & Addition", topics:[
+        { id:"structures", label:"Organic structures & addition" } ] },
+      { id:"ch14", label:"Chapter 14 - Alcohols, Oxidation & Chirality", topics:[
+        { id:"alcohols", label:"Alcohols, oxidation & chirality" } ] },
+      { id:"ch15", label:"Chapter 15 - Aldehydes, Ketones & Acetals", topics:[
+        { id:"carbonyl", label:"Aldehydes, ketones & acetals" } ] },
+      { id:"ch16", label:"Chapter 16 - Carbohydrates", topics:[
+        { id:"carbs", label:"Carbohydrates" } ] },
+      { id:"ch17", label:"Chapter 17 - Carboxylic Acids, Esters & Amides", topics:[
+        { id:"aea", label:"Carboxylic acids, esters & amides" } ] },
+      { id:"ch18", label:"Chapter 18 - Lipids", topics:[
+        { id:"fattyacids", label:"Fatty acids & melting point" },
+        { id:"waxestag", label:"Waxes & triacylglycerols" },
+        { id:"membranes", label:"Phospholipids & membranes" },
+        { id:"steroids", label:"Steroids & lipoproteins" },
+        { id:"eicosanoids", label:"Eicosanoids & NSAIDs" } ] },
+      { id:"unit7", label:"Unit 7 - Bisphenols & Hormone Mimics", topics:[
+        { id:"bisphenols", label:"Bisphenols & hormone mimics" } ] },
+      { id:"skills", label:"Skills & Review (Ch 13-16)", topics:[
+        { id:"readstructure", label:"Read the structure" },
+        { id:"drawproduct", label:"Draw the product" },
+        { id:"formulas", label:"Formulas & counting" },
+        { id:"esters", label:"Esters & biomolecules (optional)" } ] },
+      { id:"math", label:"Exam Math", topics:[
+        { id:"exammath", label:"Exam math practice" },
+        { id:"moremath", label:"More math practice (optional)" } ] }
+    ] },
+    bio: { label: "Biology", chapters: [
+      { id:"bio7", label:"Chapter 7 - Gene Expression & the lac Operon", topics:[
+        { id:"all", label:"Gene expression & the lac operon" } ] },
+      { id:"bio8", label:"Chapter 8 - Genetics, Mutation & Gene Transfer", topics:[
+        { id:"all", label:"Genetics, mutation & gene transfer" } ] },
+      { id:"bio9", label:"Chapter 9 - Biotechnology", topics:[
+        { id:"all", label:"Biotechnology (PCR, cloning, sequencing)" } ] },
+      { id:"bio10", label:"Chapter 10 - Classification & Identification", topics:[
+        { id:"all", label:"Classification & identification" } ] }
+    ] }
+  };
+  var SUBJECT_ORDER = ["chem", "bio"];
+  var nav = { subjectId: null, modeSel: null, chapterId: null };  // modeSel: "study" | "quiz"
+
+  // taxonomy lookups
+  function getChapter(subjectId, chapterId) {
+    var s = TAXONOMY[subjectId]; if (!s) return null;
+    for (var i = 0; i < s.chapters.length; i++) if (s.chapters[i].id === chapterId) return s.chapters[i];
+    return null;
+  }
+  function getTopic(subjectId, chapterId, topicId) {
+    var c = getChapter(subjectId, chapterId); if (!c) return null;
+    for (var i = 0; i < c.topics.length; i++) if (c.topics[i].id === topicId) return c.topics[i];
+    return null;
+  }
+  // data filters by taxonomy ids
+  function qForChapter(subjectId, chapterId) { return DATA.filter(function (x) { return x.subjectId === subjectId && x.chapterId === chapterId; }); }
+  function qForTopic(subjectId, chapterId, topicId) { return DATA.filter(function (x) { return x.subjectId === subjectId && x.chapterId === chapterId && x.topicId === topicId; }); }
+  function studyFor(subjectId, chapterId, topicId) {
+    var arr = window.STUDY_DATA || [];
+    for (var i = 0; i < arr.length; i++) { var d = arr[i]; if (d.subjectId === subjectId && d.chapterId === chapterId && d.topicId === topicId) return d; }
+    return null;
+  }
+
   // ---------- Build item lists ----------
   function byBank(b) { return DATA.filter(function (x) { return x.bank === b; }); }
   function subjectsList() {
@@ -529,52 +593,175 @@
   function showScreen(id) {
     ["homeScreen", "quizScreen", "resultScreen", "studyScreen"].forEach(function (s) { var el = $(s); if (el) el.classList.toggle("active", s === id); });
     window.scrollTo(0, 0);
-    if (id === "homeScreen") { refreshHistoryUI(); refreshMissedUI(); checkResume(); }
+    if (id === "homeScreen") { refreshHistoryUI(); refreshMissedUI(); checkResume(); renderBrowse(); }
   }
 
-  // ---------- Study material ----------
-  var currentStudyPractice = null;
-  function buildStudyList() {
-    var box = $("studyList"); if (!box || typeof window.STUDY_DATA === "undefined") return;
-    box.innerHTML = "";
-    window.STUDY_DATA.forEach(function (s, idx) {
-      var b = document.createElement("button");
-      b.type = "button"; b.className = "testcard";
-      b.innerHTML = '<span class="tname"></span><span class="tdesc"></span>';
-      b.querySelector(".tname").textContent = s.sub || ("Section " + (idx + 1));
-      b.querySelector(".tdesc").textContent = s.title;
-      b.addEventListener("click", function () { openStudy(idx); });
-      box.appendChild(b);
-    });
+  // ---------- Guided navigation: Subject -> Mode -> Chapter -> Topic ----------
+  function card(name, desc, fn, extra) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "testcard" + (extra ? (" " + extra) : "");
+    b.innerHTML = '<span class="tname"></span><span class="tdesc"></span>';
+    b.querySelector(".tname").textContent = name;
+    b.querySelector(".tdesc").textContent = desc;
+    b.addEventListener("click", fn);
+    return b;
   }
-  function openStudy(idx) {
-    var s = window.STUDY_DATA[idx]; if (!s) return;
-    $("studyTitle").textContent = s.title;
-    var body = $("studyBody"); body.innerHTML = "";
-    (s.sections || []).forEach(function (sec) {
-      var h = document.createElement("h3"); h.textContent = sec.h; body.appendChild(h);
-      if (sec.fig) {
-        var fig = document.createElement("figure"); fig.className = "studyfig";
-        var box = document.createElement("div"); box.className = "studyfig-img"; box.innerHTML = sec.fig;
-        fig.appendChild(box);
-        if (sec.figcap) { var fc = document.createElement("figcaption"); fc.textContent = sec.figcap; fig.appendChild(fc); }
-        body.appendChild(fig);
+  function modeToggleEl() {
+    var box = document.createElement("div"); box.className = "browse-modewrap";
+    var wrap = document.createElement("div"); wrap.className = "modeswitch"; wrap.setAttribute("role", "tablist"); wrap.setAttribute("aria-label", "Quiz mode");
+    var p = document.createElement("button"); p.type = "button"; p.className = (mode === "practice" ? "on" : ""); p.textContent = "Practice mode";
+    var e = document.createElement("button"); e.type = "button"; e.className = (mode === "exam" ? "on" : ""); e.textContent = "Exam mode";
+    p.addEventListener("click", function () { mode = "practice"; renderBrowse(); });
+    e.addEventListener("click", function () { mode = "exam"; renderBrowse(); });
+    wrap.appendChild(p); wrap.appendChild(e);
+    var hint = document.createElement("p"); hint.className = "small muted browse-modehint";
+    hint.textContent = mode === "practice"
+      ? "Practice: each answer is checked right away with an explanation."
+      : "Exam: answers stay hidden until you submit.";
+    box.appendChild(wrap); box.appendChild(hint);
+    return box;
+  }
+  function renderBreadcrumb() {
+    var bc = $("breadcrumb"); if (!bc) return; bc.innerHTML = "";
+    function add(label, fn) {
+      var b = document.createElement("button"); b.type = "button"; b.className = "crumb"; b.textContent = label;
+      if (fn) b.addEventListener("click", fn); else b.classList.add("current");
+      bc.appendChild(b);
+    }
+    add("Home", nav.subjectId ? function () { nav.subjectId = null; nav.modeSel = null; nav.chapterId = null; renderBrowse(); } : null);
+    if (nav.subjectId) add(TAXONOMY[nav.subjectId].label, nav.modeSel ? function () { nav.modeSel = null; nav.chapterId = null; renderBrowse(); } : null);
+    if (nav.modeSel) add(nav.modeSel === "study" ? "Study Material" : "Quiz", nav.chapterId ? function () { nav.chapterId = null; renderBrowse(); } : null);
+    if (nav.chapterId) add(getChapter(nav.subjectId, nav.chapterId).label.split(" - ")[0], null);
+  }
+  function renderBrowse() {
+    renderBreadcrumb();
+    var box = $("browseList"); if (!box) return; box.innerHTML = "";
+    var hint = $("browseHint");
+
+    if (!nav.subjectId) {
+      if (hint) hint.textContent = "Step 1 of 4 — choose a subject.";
+      SUBJECT_ORDER.forEach(function (sid) {
+        var s = TAXONOMY[sid];
+        var qn = DATA.filter(function (x) { return x.subjectId === sid; }).length;
+        box.appendChild(card(s.label, s.chapters.length + " chapters · " + qn + " questions", function () { nav.subjectId = sid; renderBrowse(); }, "big"));
+      });
+      return;
+    }
+    if (!nav.modeSel) {
+      if (hint) hint.textContent = "Step 2 of 4 — " + TAXONOMY[nav.subjectId].label + ": study or quiz?";
+      box.appendChild(card("Study Material", "Read the notes, diagrams and takeaways.", function () { nav.modeSel = "study"; renderBrowse(); }, "big"));
+      box.appendChild(card("Quiz", "Practice with feedback, or exam-style.", function () { nav.modeSel = "quiz"; renderBrowse(); }, "big"));
+      return;
+    }
+    if (!nav.chapterId) {
+      if (hint) hint.textContent = "Step 3 of 4 — choose a chapter or unit.";
+      if (nav.modeSel === "quiz") {
+        box.appendChild(modeToggleEl());
+        var allN = DATA.filter(function (x) { return x.subjectId === nav.subjectId; }).length;
+        box.appendChild(card("Whole subject", "All " + TAXONOMY[nav.subjectId].label + " questions (" + allN + ")", function () { startSubjectQuiz(nav.subjectId); }, "wide"));
       }
-      var ul = document.createElement("ul");
-      (sec.items || []).forEach(function (it) { var li = document.createElement("li"); li.textContent = it; ul.appendChild(li); });
-      if (ul.children.length) body.appendChild(ul);
-    });
-    currentStudyPractice = s.practiceSub || null;
+      TAXONOMY[nav.subjectId].chapters.forEach(function (ch) {
+        var tn = ch.topics.length;
+        var desc = nav.modeSel === "quiz"
+          ? (qForChapter(nav.subjectId, ch.id).length + " questions · " + tn + " topic" + (tn > 1 ? "s" : ""))
+          : (tn + " topic" + (tn > 1 ? "s" : ""));
+        box.appendChild(card(ch.label, desc, function () { nav.chapterId = ch.id; renderBrowse(); }));
+      });
+      return;
+    }
+    // topic step
+    var ch = getChapter(nav.subjectId, nav.chapterId);
+    if (hint) hint.textContent = "Step 4 of 4 — choose a topic" + (nav.modeSel === "quiz" ? ", or quiz the whole chapter." : ".");
+    if (nav.modeSel === "quiz") {
+      box.appendChild(modeToggleEl());
+      var chN = qForChapter(nav.subjectId, nav.chapterId).length;
+      box.appendChild(card("Whole chapter", "All " + ch.label.split(" - ")[0] + " questions (" + chN + ")", function () { startChapterQuiz(nav.subjectId, nav.chapterId); }, "wide"));
+      ch.topics.forEach(function (t) {
+        var n = qForTopic(nav.subjectId, nav.chapterId, t.id).length;
+        if (!n) return;
+        box.appendChild(card(t.label, n + " question" + (n > 1 ? "s" : ""), function () { startTopicQuiz(nav.subjectId, nav.chapterId, t.id); }));
+      });
+    } else {
+      ch.topics.forEach(function (t) {
+        var doc = studyFor(nav.subjectId, nav.chapterId, t.id);
+        var desc = doc ? ((doc.sections || []).length + " section" + ((doc.sections || []).length > 1 ? "s" : "")) : "No notes yet · quiz only";
+        box.appendChild(card(t.label, desc, function () { openStudyTopic(nav.subjectId, nav.chapterId, t.id); }, doc ? "" : "muted"));
+      });
+    }
+  }
+
+  // ---------- Quiz starters ----------
+  function startTopicQuiz(subjectId, chapterId, topicId) {
+    var items = qForTopic(subjectId, chapterId, topicId);
+    var t = getTopic(subjectId, chapterId, topicId);
+    startTest(items, (t ? t.label : topicId), { timed: false });
+  }
+  function startChapterQuiz(subjectId, chapterId) {
+    var ch = getChapter(subjectId, chapterId);
+    startTest(qForChapter(subjectId, chapterId), (ch ? ch.label : chapterId), { timed: false, shuffle: true });
+  }
+  function startSubjectQuiz(subjectId) {
+    startTest(DATA.filter(function (x) { return x.subjectId === subjectId; }), TAXONOMY[subjectId].label + " — all questions", { timed: false, shuffle: true });
+  }
+
+  // ---------- Study topic reading ----------
+  var currentStudy = null;
+  function openStudyTopic(subjectId, chapterId, topicId) {
+    currentStudy = { subjectId: subjectId, chapterId: chapterId, topicId: topicId };
+    var t = getTopic(subjectId, chapterId, topicId);
+    var doc = studyFor(subjectId, chapterId, topicId);
+    var ch = getChapter(subjectId, chapterId);
+    $("studyTitle").textContent = (t ? t.label : (doc ? doc.title : topicId));
+    var body = $("studyBody"); body.innerHTML = "";
+
+    var crumbEl = document.createElement("p"); crumbEl.className = "studycrumb";
+    crumbEl.textContent = TAXONOMY[subjectId].label + "  ›  " + ch.label.split(" - ")[0];
+    body.appendChild(crumbEl);
+
+    if (doc) {
+      if (doc.overview) { var ov = document.createElement("p"); ov.className = "studyoverview"; ov.textContent = doc.overview; body.appendChild(ov); }
+      var secs = doc.sections || [];
+      if (secs.length) {
+        var tools = document.createElement("div"); tools.className = "studytools";
+        var expand = document.createElement("button"); expand.type = "button"; expand.className = "btn btn-ghost btn-sm"; expand.textContent = "Expand all sections";
+        tools.appendChild(expand); body.appendChild(tools);
+        var detailsEls = [];
+        secs.forEach(function (sec) {
+          var d = document.createElement("details"); d.className = "studysec";
+          var sm = document.createElement("summary"); sm.textContent = sec.h; d.appendChild(sm);
+          var inner = document.createElement("div"); inner.className = "studysec-body";
+          if (sec.fig) {
+            var fig = document.createElement("figure"); fig.className = "studyfig";
+            var im = document.createElement("div"); im.className = "studyfig-img"; im.innerHTML = sec.fig; fig.appendChild(im);
+            if (sec.figcap) { var fc = document.createElement("figcaption"); fc.textContent = sec.figcap; fig.appendChild(fc); }
+            inner.appendChild(fig);
+          }
+          var ul = document.createElement("ul");
+          (sec.items || []).forEach(function (it) { var li = document.createElement("li"); li.textContent = it; ul.appendChild(li); });
+          if (ul.children.length) inner.appendChild(ul);
+          d.appendChild(inner); body.appendChild(d); detailsEls.push(d);
+        });
+        expand.addEventListener("click", function () {
+          var anyClosed = detailsEls.some(function (d) { return !d.open; });
+          detailsEls.forEach(function (d) { d.open = anyClosed; });
+          expand.textContent = anyClosed ? "Collapse all sections" : "Expand all sections";
+        });
+      }
+    } else {
+      var none = document.createElement("p"); none.className = "studyoverview";
+      none.textContent = "Reading notes for this topic haven't been added yet — you can still practice its questions below.";
+      body.appendChild(none);
+    }
+
     var pb = $("studyPracticeBtn");
-    if (currentStudyPractice) { pb.hidden = false; pb.textContent = "Practice: " + currentStudyPractice; }
-    else { pb.hidden = true; }
+    var qn = qForTopic(subjectId, chapterId, topicId).length;
+    if (qn) { pb.hidden = false; pb.textContent = "Quiz this topic (" + qn + ")"; } else { pb.hidden = true; }
     $("navbar").hidden = true; $("timer").hidden = true; $("answeredStat").hidden = true;
     showScreen("studyScreen");
   }
-  function practiceFromStudy() {
-    if (!currentStudyPractice) return;
-    var items = DATA.filter(function (x) { return x.sub === currentStudyPractice; });
-    startTest(items, currentStudyPractice, { timed: false });
+  function quizThisTopic() {
+    if (!currentStudy) return;
+    startTopicQuiz(currentStudy.subjectId, currentStudy.chapterId, currentStudy.topicId);
   }
   function goHome() {
     stopTimer(); session = null;
@@ -586,12 +773,9 @@
   // ---------- Mode ----------
   function setMode(m) { mode = m; setModeUI(); }
   function setModeUI() {
-    var p = mode === "practice";
-    $("modePractice").classList.toggle("on", p); $("modePractice").setAttribute("aria-selected", p);
-    $("modeExam").classList.toggle("on", !p); $("modeExam").setAttribute("aria-selected", !p);
-    $("modeHint").textContent = p
-      ? "Practice Mode shows whether each answer is correct immediately and explains why. Answers lock once chosen."
-      : "Exam Mode hides all answers until you submit. You can change answers and revisit questions until then.";
+    // The practice/exam toggle is rendered dynamically inside the Quiz browse step;
+    // if it's on screen, re-render so it reflects the current mode.
+    if ($("browseList") && nav.modeSel === "quiz") renderBrowse();
   }
 
   // ---------- Toast ----------
@@ -604,41 +788,17 @@
   function init() {
     runDataAudit();
     runSelfTests();
-    buildSubjectDropdown();
-    buildStudyList();
-    setModeUI();
+    renderBrowse();
     showScreen("homeScreen");
 
-    if ($("studyPracticeBtn")) $("studyPracticeBtn").addEventListener("click", practiceFromStudy);
+    if ($("studyPracticeBtn")) $("studyPracticeBtn").addEventListener("click", quizThisTopic);
     if ($("studyBackBtn")) $("studyBackBtn").addEventListener("click", goHome);
     if ($("studyBackBtn2")) $("studyBackBtn2").addEventListener("click", goHome);
 
-    $("modePractice").addEventListener("click", function () { setMode("practice"); });
-    $("modeExam").addEventListener("click", function () { setMode("exam"); });
-
-    document.querySelectorAll(".testcard").forEach(function (card) {
-      card.addEventListener("click", function () {
-        var t = card.dataset.test;
-        if (t === "chem") startTest(byBank("CHEM"), "Chemistry - all questions", { timed: false });
-        else if (t === "bio") startTest(byBank("BIO"), "Biology - all questions", { timed: false });
-        else if (t === "combined") startTest(DATA.slice(), "Combined - all questions", { timed: false });
-        else if (t === "random") {
-          var n = Math.min(Math.max(parseInt($("randSize").value, 10) || 25, 5), DATA.length);
-          startTest(shuffle(DATA.slice()).slice(0, n), "Randomized Practice (" + n + ")", { timed: false, shuffle: true });
-        }
-      });
-    });
-
-    $("randSize").addEventListener("input", function () {
-      var n = Math.min(Math.max(parseInt(this.value, 10) || 0, 1), DATA.length);
-      $("randCount").textContent = isNaN(n) ? 25 : Math.max(5, n);
-    });
-
-    $("startSubjectBtn").addEventListener("click", function () {
-      var val = $("subjectSelect").value; if (!val) return;
-      var parts = val.split("|"); var bank = parts[0], sub = parts.slice(1).join("|");
-      var items = DATA.filter(function (x) { return x.bank === bank && x.sub === sub; });
-      startTest(items, sub, { timed: false });
+    var rb = $("randStartBtn");
+    if (rb) rb.addEventListener("click", function () {
+      var n = Math.min(Math.max(parseInt($("randSize").value, 10) || 25, 5), DATA.length);
+      startTest(shuffle(DATA.slice()).slice(0, n), "Randomized practice (" + n + ")", { timed: false, shuffle: true });
     });
 
     $("retestMissedBtn").addEventListener("click", function () {
@@ -707,8 +867,6 @@
     $("targetInput").value = getTarget();
     $("targetInput").addEventListener("change", function () { this.value = setTarget(this.value); toast("Practice target set to " + this.value + "%"); });
 
-    // init count label
-    $("randCount").textContent = $("randSize").value;
     checkResume();
   }
 

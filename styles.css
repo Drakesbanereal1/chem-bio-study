@@ -293,3 +293,32 @@ body::before{ content:""; position:fixed; inset:0; z-index:-1; background:url("b
 .studyfig-img{background:#fff;border:1px solid #d7e0e6;border-radius:12px;padding:14px 12px;overflow-x:auto}
 .studyfig-img svg{display:block;width:100%;height:auto;max-width:620px;margin:0 auto}
 .studyfig figcaption{margin:8px 2px 0;font-size:.9rem;line-height:1.45;color:#4a5b66}
+/* ===== Guided navigation (Subject > Mode > Chapter > Topic) ===== */
+.breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:2px 4px;margin:10px 0 14px}
+.crumb{background:transparent;border:none;color:var(--brand);font-weight:700;font-size:.92rem;padding:4px 6px;border-radius:7px;cursor:pointer}
+.crumb:hover{background:var(--brand-soft)}
+.crumb:not(:last-child)::after{content:"\203A";color:var(--muted);margin-left:8px;font-weight:600}
+.crumb.current{color:var(--ink);cursor:default}
+.crumb.current:hover{background:transparent}
+.testcard.big{padding:22px 20px}
+.testcard.big .tname{font-size:1.18rem}
+.testcard.big .tdesc{font-size:.96rem}
+.testcard.wide{grid-column:1/-1;background:var(--brand-soft);border-color:var(--brand)}
+.testcard.wide .tname{color:var(--brand-deep)}
+.testcard.muted{opacity:.72}
+.browse-modewrap{grid-column:1/-1;margin:2px 0 4px}
+.browse-modehint{margin:8px 2px 0}
+/* ===== Study topic reading ===== */
+.studycrumb{font-size:.85rem;color:var(--muted);font-weight:600;margin:0 0 6px}
+.studyoverview{font-size:1.06rem;line-height:1.55;color:var(--ink);margin:0 0 14px}
+.studytools{margin:0 0 10px}
+.btn-sm{min-height:0;padding:7px 14px;font-size:.88rem;border-radius:9px}
+details.studysec{border:1px solid var(--line);border-radius:11px;margin:0 0 10px;background:var(--surface);overflow:hidden}
+details.studysec>summary{list-style:none;cursor:pointer;padding:13px 16px;font-weight:700;color:var(--brand-deep);display:flex;align-items:center;gap:10px}
+details.studysec>summary::-webkit-details-marker{display:none}
+details.studysec>summary::before{content:"\002B";font-weight:700;color:var(--brand);font-size:1.1rem;line-height:1}
+details.studysec[open]>summary::before{content:"\2212"}
+details.studysec[open]>summary{border-bottom:1px solid var(--line)}
+.studysec-body{padding:6px 16px 14px}
+.studysec-body ul{margin:8px 0 2px;padding-left:22px}
+.studysec-body li{margin:7px 0;line-height:1.5}

@@ -13,7 +13,7 @@
 <meta name="apple-mobile-web-app-title" content="Chem &amp; Bio">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 
@@ -45,60 +45,28 @@
   </div>
 
   <div class="card">
-    <h2 class="sect"><span class="ic">S</span>Study material</h2>
-    <p class="small muted">Read the notes for each chapter, then jump into practice on that exact section. No internet needed.</p>
-    <div class="testgrid" id="studyList"></div>
+    <h2 class="sect"><span class="ic">S</span>Study &amp; Quiz</h2>
+    <p class="small muted" id="browseHint">Step 1 of 4 &mdash; choose a subject.</p>
+    <nav class="breadcrumb" id="breadcrumb" aria-label="Navigation"></nav>
+    <div class="testgrid" id="browseList"></div>
   </div>
 
   <div class="card">
-    <h2 class="sect"><span class="ic">1</span>Choose a mode</h2>
-    <div class="modewrap">
-      <div class="modeswitch" role="tablist" aria-label="Study mode">
-        <button id="modePractice" class="on" role="tab" aria-selected="true">Practice Mode<span class="sub">Answer feedback + explanation right away</span></button>
-        <button id="modeExam" role="tab" aria-selected="false">Exam Mode<span class="sub">Answers hidden until you submit</span></button>
-      </div>
-      <p class="small muted" id="modeHint">Practice Mode shows whether each answer is correct immediately and explains why.</p>
-    </div>
-    <div class="field" style="margin-top:14px">
-      <label for="targetInput">Practice target (%):</label>
-      <input type="number" id="targetInput" min="1" max="100" value="80" style="max-width:100px">
-      <span class="small muted">A personal study goal &mdash; not an official passing score.</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2 class="sect"><span class="ic">2</span>Choose a test</h2>
-    <div class="testgrid">
-      <button class="testcard" data-test="chem">
-        <span class="tname">Chemistry</span>
-        <span class="tdesc">All chemistry questions in the bank.</span>
-      </button>
-      <button class="testcard" data-test="bio">
-        <span class="tname">Biology</span>
-        <span class="tdesc">All biology questions in the bank.</span>
-      </button>
-      <button class="testcard" data-test="combined">
-        <span class="tname">Combined</span>
-        <span class="tdesc">Chemistry and biology together.</span>
-      </button>
-      <button class="testcard" data-test="random">
-        <span class="tname">Randomized <span class="tcount" id="randCount">25</span></span>
-        <span class="tdesc">A shuffled set drawn from everything.</span>
-      </button>
-    </div>
-
-    <div class="field">
-      <label for="subjectSelect">Test by topic:</label>
-      <select id="subjectSelect" aria-label="Choose a topic"></select>
-      <button class="btn btn-ghost" id="startSubjectBtn">Start</button>
-    </div>
+    <h2 class="sect"><span class="ic">+</span>Quick practice</h2>
+    <p class="small muted">Shortcuts across the whole bank &mdash; or use Study &amp; Quiz above to drill into a chapter and topic.</p>
     <div class="field">
       <label for="randSize">Randomized set size:</label>
       <input type="number" id="randSize" min="5" max="500" step="5" value="25" style="max-width:110px">
       <span class="small muted">questions</span>
+      <button class="btn btn-ghost" id="randStartBtn">Start random set</button>
     </div>
     <div class="field">
       <button class="btn btn-ghost" id="retestMissedBtn">Retest my missed questions <span id="missedBadge" class="tcount" style="margin-left:2px">0</span></button>
+    </div>
+    <div class="field">
+      <label for="targetInput">Practice target (%):</label>
+      <input type="number" id="targetInput" min="1" max="100" value="80" style="max-width:100px">
+      <span class="small muted">A personal study goal &mdash; not an official passing score.</span>
     </div>
   </div>
 
@@ -194,7 +162,7 @@
     <h1 class="title" id="studyTitle" style="margin-top:10px"></h1>
     <div id="studyBody" class="studybody"></div>
     <div class="actions" style="margin-top:16px">
-      <button class="btn btn-primary" id="studyPracticeBtn">Practice this chapter</button>
+      <button class="btn btn-primary" id="studyPracticeBtn">Quiz this topic</button>
       <button class="btn btn-ghost" id="studyBackBtn2">Back to menu</button>
     </div>
   </div>
@@ -236,9 +204,9 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="questions.js?v=12"></script>
-<script src="study.js?v=13"></script>
-<script src="app.js?v=9"></script>
+<script src="questions.js?v=13"></script>
+<script src="study.js?v=14"></script>
+<script src="app.js?v=10"></script>
 <script>
   /* Offline PWA support — only registers when served over http(s); harmless on file:// */
   if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
