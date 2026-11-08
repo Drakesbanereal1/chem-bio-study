@@ -173,40 +173,134 @@ window.STUDY_DATA = [
   ]
  },
  {
-  "id": "ST_ch17_aea",
+  "id": "ST_ch17_acids",
   "subjectId": "chem",
   "chapterId": "ch17",
-  "topicId": "aea",
-  "title": "Carboxylic acids, esters & amides",
-  "overview": "The three carbonyl families and how esters form and hydrolyze.",
+  "topicId": "acids",
+  "title": "Carboxylic acids",
+  "overview": "A carboxylic acid is the -COOH group: a C=O and an -OH on the same carbon. It is a weak acid that loses H+ to become a carboxylate.",
   "sections": [
    {
-    "h": "Diagram: the three Chapter-17 groups",
+    "h": "The three Chapter 17 families (compare first)",
     "fig": "<svg viewBox=\"0 0 600 140\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui,Arial,sans-serif\"><g stroke=\"#1f2d3a\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"35\" y1=\"66\" x2=\"80\" y2=\"66\"/><line x1=\"76\" y1=\"62\" x2=\"76\" y2=\"34\"/><line x1=\"84\" y1=\"62\" x2=\"84\" y2=\"34\"/><line x1=\"80\" y1=\"66\" x2=\"122\" y2=\"66\"/><line x1=\"225\" y1=\"66\" x2=\"270\" y2=\"66\"/><line x1=\"266\" y1=\"62\" x2=\"266\" y2=\"34\"/><line x1=\"274\" y1=\"62\" x2=\"274\" y2=\"34\"/><line x1=\"270\" y1=\"66\" x2=\"304\" y2=\"66\"/><line x1=\"326\" y1=\"66\" x2=\"352\" y2=\"66\"/><line x1=\"415\" y1=\"66\" x2=\"460\" y2=\"66\"/><line x1=\"456\" y1=\"62\" x2=\"456\" y2=\"34\"/><line x1=\"464\" y1=\"62\" x2=\"464\" y2=\"34\"/><line x1=\"460\" y1=\"66\" x2=\"496\" y2=\"66\"/><line x1=\"522\" y1=\"66\" x2=\"548\" y2=\"66\"/></g><g font-size=\"16\" fill=\"#1f2d3a\"><text x=\"18\" y=\"71\">R</text><text x=\"71\" y=\"28\">O</text><text x=\"126\" y=\"71\">OH</text><text x=\"208\" y=\"71\">R</text><text x=\"261\" y=\"28\">O</text><text x=\"308\" y=\"71\">O</text><text x=\"356\" y=\"71\">R</text><text x=\"398\" y=\"71\">R</text><text x=\"451\" y=\"28\">O</text><text x=\"500\" y=\"71\">N</text><text x=\"500\" y=\"90\" font-size=\"12\">H</text><text x=\"552\" y=\"71\">R</text></g><g font-size=\"13\" font-weight=\"700\" fill=\"#0f7d86\"><text x=\"18\" y=\"108\">Carboxylic acid</text><text x=\"208\" y=\"108\">Ester</text><text x=\"398\" y=\"108\">Amide</text></g><g font-size=\"12\" fill=\"#5b6b76\"><text x=\"18\" y=\"126\">R-C(=O)-OH</text><text x=\"208\" y=\"126\">R-C(=O)-O-R</text><text x=\"398\" y=\"126\">R-C(=O)-NH-R</text></g></svg>",
     "figcap": "All three share the C=O carbonyl. What hangs off it defines the group: -OH is a carboxylic acid, -O-R is an ester, -N is an amide."
    },
    {
-    "h": "Three key groups",
+    "h": "The carboxyl group",
     "items": [
-     "Carboxylic acid: R-C(=O)-OH (also written R-COOH). Its deprotonated form is the carboxylate, R-COO-.",
-     "Ester: R-C(=O)-O-R' (an oxygen bonded to the carbonyl carbon AND a second carbon group).",
-     "Amide: a carbonyl carbon bonded directly to nitrogen, R-C(=O)-NH-R'."
+     "A carboxylic acid is R-C(=O)-OH, condensed R-COOH: a carbonyl (C=O) and a hydroxyl (-OH) on the SAME carbon.",
+     "Naming: replace the parent alkane -e with -oic acid. Ethane -> ethanoic acid (acetic acid, CH3COOH).",
+     "Important terms: carbonyl carbon (the C of C=O), hydroxyl (-OH), carboxyl group (the whole -COOH)."
     ]
    },
    {
-    "h": "Ester formation & hydrolysis",
+    "h": "Why it acts as an acid",
     "items": [
-     "A carboxylic acid + an alcohol form an ester + water (acid-catalyzed esterification). A wax ester = one fatty acid + one long-chain alcohol.",
-     "Acidic hydrolysis: ester + water -> carboxylic acid (R-COOH) + alcohol.",
-     "Basic hydrolysis (saponification): ester + NaOH -> sodium carboxylate (R-COO- Na+) + alcohol. Long-chain salts are soaps.",
-     "The bond cleaved is between the carbonyl carbon and the single-bond oxygen; the C=O stays in the acid product.",
-     "Remember: acidic hydrolysis gives R-COOH; basic hydrolysis gives R-COO-."
+     "The -OH hydrogen can leave, so a carboxylic acid is a WEAK acid.",
+     "Losing H+ gives the carboxylate anion R-COO- (acetic acid -> acetate, CH3COO-).",
+     "Short carboxylic acids dissolve in water (the -COOH hydrogen-bonds); solubility falls as the chain grows.",
+     "Remember: see -C(=O)-OH = carboxylic acid; it loses H+ to become R-COO-."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_ch17_esters",
+  "subjectId": "chem",
+  "chapterId": "ch17",
+  "topicId": "esters",
+  "title": "Esters & esterification",
+  "overview": "An ester is R-C(=O)-O-R'. It forms when a carboxylic acid and an alcohol join and release water (esterification).",
+  "sections": [
+   {
+    "h": "The ester group",
+    "items": [
+     "An ester is R-C(=O)-O-R': a carbonyl carbon bonded to an oxygen that is ALSO bonded to a second carbon group.",
+     "Tell it from an acid: an acid ends in -O-H, an ester ends in -O-R' (a carbon replaces the acid's hydrogen)."
+    ]
+   },
+   {
+    "h": "Esterification (building an ester)",
+    "fig": "<svg viewBox=\"0 0 560 120\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui,Arial,sans-serif\"><g stroke=\"#1f2d3a\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><polyline points=\"30,70 48,60 66,70 84,60 102,70 120,60 138,70 156,60 174,70 192,60 210,70\"/><line x1=\"206\" y1=\"66\" x2=\"206\" y2=\"42\"/><line x1=\"214\" y1=\"66\" x2=\"214\" y2=\"42\"/><polyline points=\"294,70 312,60 330,70 348,60 366,70 384,60 402,70 420,60 438,70 456,60 474,70 492,60 510,70\"/></g><g stroke=\"#2563c9\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"214\" y1=\"70\" x2=\"242\" y2=\"70\"/><line x1=\"262\" y1=\"70\" x2=\"294\" y2=\"70\"/><line x1=\"250\" y1=\"26\" x2=\"250\" y2=\"60\"/></g><text x=\"205\" y=\"36\" font-size=\"15\" fill=\"#1f2d3a\">O</text><text x=\"245\" y=\"75\" font-size=\"15\" fill=\"#2563c9\" font-weight=\"700\">O</text><text x=\"196\" y=\"20\" font-size=\"13\" fill=\"#2563c9\" font-weight=\"700\">ester bond</text><text x=\"60\" y=\"104\" font-size=\"12\" fill=\"#5b6b76\">fatty acid part</text><text x=\"356\" y=\"104\" font-size=\"12\" fill=\"#5b6b76\">long-chain alcohol part</text></svg>",
+    "figcap": "A wax ester = one fatty acid + one long-chain alcohol joined by a single ester bond (blue).",
+    "items": [
+     "Carboxylic acid + alcohol -> ester + water (acid-catalyzed). The acid's -OH and the alcohol's H leave together as H2O.",
+     "Worked example: CH3COOH (acetic acid) + CH3CH2OH (ethanol) -> CH3C(=O)OCH2CH3 (ethyl acetate) + H2O.",
+     "A wax ester is one long-chain fatty acid + one long-chain alcohol (a single ester bond).",
+     "Remember: esterification joins acid + alcohol and releases one water."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_ch17_hydrolysis",
+  "subjectId": "chem",
+  "chapterId": "ch17",
+  "topicId": "hydrolysis",
+  "title": "Acidic hydrolysis vs saponification",
+  "overview": "Hydrolysis splits an ester with water. Acid gives back a carboxylic acid + alcohol; NaOH gives a carboxylate salt (soap) + alcohol.",
+  "sections": [
+   {
+    "h": "The bond that breaks",
+    "fig": "<svg viewBox=\"0 0 560 120\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui,Arial,sans-serif\"><g stroke=\"#1f2d3a\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><polyline points=\"30,70 48,60 66,70 84,60 102,70 120,60 138,70 156,60 174,70 192,60 210,70\"/><line x1=\"206\" y1=\"66\" x2=\"206\" y2=\"42\"/><line x1=\"214\" y1=\"66\" x2=\"214\" y2=\"42\"/><polyline points=\"294,70 312,60 330,70 348,60 366,70 384,60 402,70 420,60 438,70 456,60 474,70 492,60 510,70\"/></g><g stroke=\"#2563c9\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"214\" y1=\"70\" x2=\"242\" y2=\"70\"/><line x1=\"262\" y1=\"70\" x2=\"294\" y2=\"70\"/><line x1=\"250\" y1=\"26\" x2=\"250\" y2=\"60\"/></g><text x=\"205\" y=\"36\" font-size=\"15\" fill=\"#1f2d3a\">O</text><text x=\"245\" y=\"75\" font-size=\"15\" fill=\"#2563c9\" font-weight=\"700\">O</text><text x=\"196\" y=\"20\" font-size=\"13\" fill=\"#2563c9\" font-weight=\"700\">ester bond</text><text x=\"60\" y=\"104\" font-size=\"12\" fill=\"#5b6b76\">fatty acid part</text><text x=\"356\" y=\"104\" font-size=\"12\" fill=\"#5b6b76\">long-chain alcohol part</text></svg>",
+    "figcap": "Hydrolysis cleaves the ester bond (blue): the bond between the carbonyl carbon and the single-bond oxygen. The C=O stays on the acid side.",
+    "items": [
+     "Only the C(carbonyl)-O(single-bond) bond breaks. The carbonyl side keeps its C=O and becomes the acid; the O-R' side becomes the alcohol."
+    ]
+   },
+   {
+    "h": "Acidic hydrolysis (worked)",
+    "items": [
+     "Rule: ester + water --(H+)--> carboxylic acid + alcohol.",
+     "Given: CH3C(=O)OCH2CH3 (ethyl acetate) + H2O, acidic.",
+     "Step 1: break the carbonyl C - O bond. Step 2: carbonyl side + OH -> CH3COOH. Step 3: O-R' side + H -> CH3CH2OH.",
+     "Answer: CH3COOH (acetic acid) + CH3CH2OH (ethanol)."
+    ]
+   },
+   {
+    "h": "Basic hydrolysis / saponification (worked)",
+    "items": [
+     "Rule: ester + NaOH -> sodium carboxylate (R-COO- Na+) + alcohol. Long-chain salts are soaps.",
+     "Given: CH3C(=O)OCH3 (methyl acetate) + NaOH.",
+     "Step: carbonyl side -> CH3COO- Na+ (sodium acetate); O-R' side -> CH3OH (methanol).",
+     "Answer: CH3COO- Na+ + CH3OH.",
+     "Remember: acid hydrolysis gives R-COOH; base (NaOH) gives R-COO- Na+."
+    ]
+   },
+   {
+    "h": "Triacylglycerol: where 3 fatty acids come from",
+    "fig": "<svg viewBox=\"0 0 400 170\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui,Arial,sans-serif\"><g stroke=\"#1f2d3a\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"58\" y1=\"52\" x2=\"58\" y2=\"76\"/><line x1=\"58\" y1=\"92\" x2=\"58\" y2=\"116\"/><line x1=\"142\" y1=\"36\" x2=\"142\" y2=\"18\"/><line x1=\"150\" y1=\"36\" x2=\"150\" y2=\"18\"/><polyline points=\"150,40 168,30 186,40 204,30 222,40 240,30 258,40 276,30 294,40 312,30 330,40\"/><line x1=\"142\" y1=\"76\" x2=\"142\" y2=\"58\"/><line x1=\"150\" y1=\"76\" x2=\"150\" y2=\"58\"/><polyline points=\"150,80 168,70 186,80 204,70 222,80 240,70 258,80 276,70 294,80 312,70 330,80\"/><line x1=\"142\" y1=\"116\" x2=\"142\" y2=\"98\"/><line x1=\"150\" y1=\"116\" x2=\"150\" y2=\"98\"/><polyline points=\"150,120 168,110 186,120 204,110 222,120 240,110 258,120 276,110 294,120 312,110 330,120\"/></g><g stroke=\"#2563c9\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"74\" y1=\"40\" x2=\"100\" y2=\"40\"/><line x1=\"116\" y1=\"40\" x2=\"140\" y2=\"40\"/><line x1=\"74\" y1=\"80\" x2=\"100\" y2=\"80\"/><line x1=\"116\" y1=\"80\" x2=\"140\" y2=\"80\"/><line x1=\"74\" y1=\"120\" x2=\"100\" y2=\"120\"/><line x1=\"116\" y1=\"120\" x2=\"140\" y2=\"120\"/></g><g font-size=\"14\" fill=\"#1f2d3a\"><text x=\"34\" y=\"45\">CH2</text><text x=\"42\" y=\"85\">CH</text><text x=\"34\" y=\"125\">CH2</text><text x=\"134\" y=\"14\">O</text><text x=\"134\" y=\"54\">O</text><text x=\"134\" y=\"94\">O</text></g><g font-size=\"14\" fill=\"#2563c9\" font-weight=\"700\"><text x=\"101\" y=\"45\">O</text><text x=\"101\" y=\"85\">O</text><text x=\"101\" y=\"125\">O</text></g><text x=\"205\" y=\"16\" font-size=\"13\" fill=\"#0f7d86\" font-weight=\"700\">3 ester bonds (blue)</text></svg>",
+    "figcap": "Glycerol (left) joined to three fatty acids through three ester bonds (blue). Full hydrolysis gives 1 glycerol + 3 fatty acids; saponification gives 1 glycerol + 3 soap salts.",
+    "items": [
+     "A fat (triacylglycerol) has THREE ester bonds, so complete hydrolysis releases THREE fatty acids.",
+     "Acidic: 1 TAG + 3 H2O -> 1 glycerol + 3 fatty acids.",
+     "Saponification: 1 TAG + 3 NaOH -> 1 glycerol + 3 soap (sodium) salts."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_ch17_amides",
+  "subjectId": "chem",
+  "chapterId": "ch17",
+  "topicId": "amides",
+  "title": "Amides",
+  "overview": "An amide has a carbonyl carbon bonded straight to nitrogen (R-C(=O)-N). It is the linkage that attaches a fatty acid to sphingosine.",
+  "sections": [
+   {
+    "h": "The amide group",
+    "fig": "<svg viewBox=\"0 0 600 140\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui,Arial,sans-serif\"><g stroke=\"#1f2d3a\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"35\" y1=\"66\" x2=\"80\" y2=\"66\"/><line x1=\"76\" y1=\"62\" x2=\"76\" y2=\"34\"/><line x1=\"84\" y1=\"62\" x2=\"84\" y2=\"34\"/><line x1=\"80\" y1=\"66\" x2=\"122\" y2=\"66\"/><line x1=\"225\" y1=\"66\" x2=\"270\" y2=\"66\"/><line x1=\"266\" y1=\"62\" x2=\"266\" y2=\"34\"/><line x1=\"274\" y1=\"62\" x2=\"274\" y2=\"34\"/><line x1=\"270\" y1=\"66\" x2=\"304\" y2=\"66\"/><line x1=\"326\" y1=\"66\" x2=\"352\" y2=\"66\"/><line x1=\"415\" y1=\"66\" x2=\"460\" y2=\"66\"/><line x1=\"456\" y1=\"62\" x2=\"456\" y2=\"34\"/><line x1=\"464\" y1=\"62\" x2=\"464\" y2=\"34\"/><line x1=\"460\" y1=\"66\" x2=\"496\" y2=\"66\"/><line x1=\"522\" y1=\"66\" x2=\"548\" y2=\"66\"/></g><g font-size=\"16\" fill=\"#1f2d3a\"><text x=\"18\" y=\"71\">R</text><text x=\"71\" y=\"28\">O</text><text x=\"126\" y=\"71\">OH</text><text x=\"208\" y=\"71\">R</text><text x=\"261\" y=\"28\">O</text><text x=\"308\" y=\"71\">O</text><text x=\"356\" y=\"71\">R</text><text x=\"398\" y=\"71\">R</text><text x=\"451\" y=\"28\">O</text><text x=\"500\" y=\"71\">N</text><text x=\"500\" y=\"90\" font-size=\"12\">H</text><text x=\"552\" y=\"71\">R</text></g><g font-size=\"13\" font-weight=\"700\" fill=\"#0f7d86\"><text x=\"18\" y=\"108\">Carboxylic acid</text><text x=\"208\" y=\"108\">Ester</text><text x=\"398\" y=\"108\">Amide</text></g><g font-size=\"12\" fill=\"#5b6b76\"><text x=\"18\" y=\"126\">R-C(=O)-OH</text><text x=\"208\" y=\"126\">R-C(=O)-O-R</text><text x=\"398\" y=\"126\">R-C(=O)-NH-R</text></g></svg>",
+    "figcap": "Ester vs amide: the atom next to the carbonyl tells them apart - an O (ester) or an N (amide).",
+    "items": [
+     "An amide has a carbonyl carbon bonded DIRECTLY to nitrogen: R-C(=O)-N.",
+     "Key contrast: ester = C(=O)-O-C, amide = C(=O)-N. Check the atom next to the carbonyl (O vs N)."
     ]
    },
    {
     "h": "The amide in sphingomyelin",
     "items": [
-     "The fatty acid's carbonyl carbon bonds to the nitrogen of sphingosine, forming R-C(=O)-NH-sphingosine (an amide bond)."
+     "In sphingomyelin the fatty acid's carbonyl carbon is joined to the NITROGEN of sphingosine: an amide bond, R-C(=O)-NH-sphingosine.",
+     "Remember: carbonyl-carbon to nitrogen = amide; that is how the fatty-acid tail attaches in sphingomyelin."
     ]
    }
   ]
@@ -239,6 +333,18 @@ window.STUDY_DATA = [
      "A cis double bond puts the chain segments on the same side and bends the chain; a trans double bond keeps it straighter.",
      "Tighter packing generally raises melting point: a cis-unsaturated fatty acid usually melts LOWER than its trans isomer.",
      "Remember: count -COOH as C1, count only C=C bonds after the colon, and cis bends = looser packing."
+    ]
+   },
+   {
+    "h": "Worked example: counting carbons (18:0 and a 20:2 cis)",
+    "fig": "<svg viewBox=\"0 0 600 235\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui,Arial,sans-serif\"><g stroke=\"#1f2d3a\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><polyline points=\"55,60 69,50 83,60 97,50 111,60 125,50 139,60 153,50 167,60 181,50 195,60 209,50 223,60 237,50 251,60 265,50 279,60 293,50\"/><line x1=\"289\" y1=\"46\" x2=\"289\" y2=\"24\"/><line x1=\"297\" y1=\"46\" x2=\"297\" y2=\"24\"/><line x1=\"293\" y1=\"50\" x2=\"315\" y2=\"62\"/></g><text x=\"16\" y=\"64\" font-size=\"13\" fill=\"#1f2d3a\">CH3</text><text x=\"284\" y=\"20\" font-size=\"14\" fill=\"#1f2d3a\">O</text><text x=\"319\" y=\"66\" font-size=\"13\" fill=\"#1f2d3a\">OH</text><text x=\"360\" y=\"42\" font-size=\"13\" font-weight=\"700\" fill=\"#0f7d86\">Stearic acid</text><text x=\"360\" y=\"60\" font-size=\"12\" fill=\"#5b6b76\">straight chain, no C=C</text><text x=\"55\" y=\"92\" font-size=\"13\" fill=\"#1f2d3a\">1 CH3 + 16 CH2 + 1 COOH = 18 carbons</text><text x=\"55\" y=\"110\" font-size=\"13\" font-weight=\"700\" fill=\"#2563c9\">= 18:0  (18 carbons, 0 double bonds)</text><g stroke=\"#1f2d3a\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><polyline points=\"40,170 56,158 72,170 88,158 104,170 120,158 136,170 152,158 168,170 184,158 200,170 216,158 232,170 248,158 264,170 280,158 296,170 312,158 328,170 344,158\"/><line x1=\"340\" y1=\"154\" x2=\"340\" y2=\"132\"/><line x1=\"348\" y1=\"154\" x2=\"348\" y2=\"132\"/><line x1=\"344\" y1=\"158\" x2=\"366\" y2=\"170\"/></g><g stroke=\"#2563c9\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"170\" y1=\"164\" x2=\"186\" y2=\"152\"/><line x1=\"122\" y1=\"152\" x2=\"138\" y2=\"164\"/></g><text x=\"8\" y=\"174\" font-size=\"13\" fill=\"#1f2d3a\">CH3</text><text x=\"334\" y=\"128\" font-size=\"13\" fill=\"#1f2d3a\">O</text><text x=\"369\" y=\"174\" font-size=\"13\" fill=\"#1f2d3a\">OH</text><text x=\"150\" y=\"141\" font-size=\"12\" font-weight=\"700\" fill=\"#2563c9\">C11=C12</text><line x1=\"176\" y1=\"145\" x2=\"178\" y2=\"153\" stroke=\"#2563c9\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"56\" y=\"141\" font-size=\"12\" font-weight=\"700\" fill=\"#2563c9\">C14=C15</text><line x1=\"92\" y1=\"145\" x2=\"128\" y2=\"153\" stroke=\"#2563c9\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"388\" y=\"150\" font-size=\"13\" font-weight=\"700\" fill=\"#0f7d86\">20 carbons, 2 cis C=C</text><text x=\"388\" y=\"168\" font-size=\"12\" fill=\"#5b6b76\">count C1 = COOH end</text></svg>",
+    "figcap": "Top: stearic acid - count 1 CH3 + 16 CH2 + 1 COOH = 18 carbons, no C=C, so 18:0. Bottom: a 20-carbon acid with cis double bonds marked at C11=C12 and C14=C15 (count from the COOH end).",
+    "items": [
+     "Stearic acid: count every carbon on the line-angle drawing. 1 methyl (CH3) end carbon + 16 methylene (CH2) carbons + 1 carboxyl carbon (the -COOH carbon) = 18 carbons.",
+     "No carbon-carbon double bonds -> the second number is 0, so the notation is 18:0.",
+     "20-carbon example: number carbons starting at the -COOH carbon as C1. The double bonds sit at C11=C12 and C14=C15, so it is 20 carbons with 2 double bonds.",
+     "Spotting cis: at each C=C the two chain pieces leave on the SAME side, kinking the chain (trans would stay straight).",
+     "Remember: X:Y = (total carbons):(number of C=C). Count -COOH as C1 and never count the C=O as a double bond here."
     ]
    }
   ]
@@ -278,8 +384,8 @@ window.STUDY_DATA = [
   "subjectId": "chem",
   "chapterId": "ch18",
   "topicId": "membranes",
-  "title": "Phospholipids & membranes",
-  "overview": "Phospholipids, the bilayer, and the fluid mosaic model of the cell membrane.",
+  "title": "Phospholipids & cell membranes",
+  "overview": "Phospholipids, the bilayer they build, and the fluid mosaic model of the cell membrane.",
   "sections": [
    {
     "h": "Diagram: the phospholipid bilayer",
@@ -287,10 +393,9 @@ window.STUDY_DATA = [
     "figcap": "Amphipathic phospholipids line up so the polar heads face water on BOTH sides and the nonpolar tails hide in the middle. cis tails pack loosely and raise membrane fluidity."
    },
    {
-    "h": "Membrane lipids",
+    "h": "Membrane phospholipids",
     "items": [
      "Glycerophospholipid = glycerol backbone + two ester-linked fatty-acid tails + a phosphate-containing polar head.",
-     "Sphingomyelin = sphingosine (its own hydrocarbon tail) + one amide-linked fatty acid (the second tail) + a phosphate head. It is a key lipid in myelin.",
      "Phospholipids are amphipathic: polar heads face water on both sides of a bilayer; nonpolar tails point inward."
     ]
    },
@@ -299,7 +404,34 @@ window.STUDY_DATA = [
     "items": [
      "Lipids and many proteins move laterally. Integral proteins are embedded, transmembrane proteins span the membrane, peripheral proteins sit on a surface.",
      "Cholesterol sits among the lipids; surface carbohydrates help with cell recognition.",
-     "cis-unsaturated tails pack less tightly and generally increase membrane fluidity."
+     "cis-unsaturated tails pack less tightly and generally increase membrane fluidity.",
+     "Linkage check: a glycerophospholipid's two fatty-acid tails are ESTER-linked; in sphingomyelin one tail is AMIDE-linked (see the Sphingomyelin & myelin topic)."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_ch18_sphingomyelin",
+  "subjectId": "chem",
+  "chapterId": "ch18",
+  "topicId": "sphingomyelin",
+  "title": "Sphingomyelin & myelin",
+  "overview": "Sphingomyelin is a sphingosine-based phospholipid whose fatty acid is amide-linked; it is a major lipid of the myelin sheath that insulates nerves.",
+  "sections": [
+   {
+    "h": "Sphingomyelin structure",
+    "items": [
+     "Its backbone is sphingosine, NOT glycerol. Sphingosine already carries one long hydrocarbon chain (CH(OH)-CH=CH-(CH2)12-CH3) - that is the first tail.",
+     "A second fatty acid is joined to sphingosine's nitrogen by an AMIDE bond (R-C(=O)-NH-), not an ester. That amide linkage is the key difference from a glycerophospholipid (whose tails are ester-linked).",
+     "The polar head is a phosphate + choline group, so sphingomyelin is still amphipathic: a polar head plus two nonpolar tails that fit into a bilayer."
+    ]
+   },
+   {
+    "h": "Role in myelin",
+    "items": [
+     "Sphingomyelin is a major lipid of the myelin sheath - the insulating wrap around many nerve axons.",
+     "That insulation speeds nerve-signal conduction; losing myelin disrupts signaling.",
+     "Remember: sphingosine backbone + amide-linked fatty acid + phosphate-choline head = sphingomyelin, a myelin lipid."
     ]
    }
   ]
@@ -434,6 +566,40 @@ window.STUDY_DATA = [
      "Temperature: K = deg C + 273.15.    Density = mass / volume.",
      "Moles: n = mass / molar mass.    Mole ratio comes from balanced coefficients.",
      "pH = -log[H3O+];  pH + pOH = 14.    Dilution: C1V1 = C2V2.    Gas: PV = nRT (R = 0.082057)."
+    ]
+   },
+   {
+    "h": "Worked exam problems (given / rule / steps / answer)",
+    "items": [
+     "Molecular formula from unsaturation - Given: 5 carbons, one C=C. Rule: one C=C -> CnH(2n). Steps: n=5, 2n=10. Answer: C5H10.",
+     "Dilution - Given: 2.0 M stock; make 50. mL of 0.50 M. Rule: C1V1 = C2V2. Steps: V1 = C2V2/C1 = (0.50 M x 50. mL)/(2.0 M) = 12.5 mL. Answer: measure 12.5 mL stock, add water to 50. mL.",
+     "Moles - Given: 36 g glucose, molar mass 180 g/mol. Rule: n = mass/molar mass. Steps: n = 36 g / 180 g/mol = 0.20 mol. Answer: 0.20 mol.",
+     "Stereoisomers - Given: 2 chiral centers. Rule: max stereoisomers = 2^n. Steps: 2^2 = 4. Answer: 4 stereoisomers."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_math_moremath",
+  "subjectId": "chem",
+  "chapterId": "math",
+  "topicId": "moremath",
+  "title": "More math practice",
+  "overview": "Extra general-chemistry calculations, each shown with the given values, the rule, the steps, and the final answer with units.",
+  "sections": [
+   {
+    "h": "Worked examples",
+    "items": [
+     "pH - Given: [H3O+] = 1.0 x 10^-3 M. Rule: pH = -log[H3O+]. Steps: pH = -log(1.0e-3) = 3.0. Answer: pH = 3.0 (then pOH = 14 - 3 = 11).",
+     "Density - Given: mass 24 g, volume 30. mL. Rule: d = m/V. Steps: d = 24 g / 30. mL = 0.80 g/mL. Answer: 0.80 g/mL.",
+     "Temperature - Given: 25 deg C. Rule: K = deg C + 273.15. Steps: 25 + 273.15 = 298.15. Answer: 298.15 K.",
+     "Ideal gas - Given: 1.0 mol gas, 1.0 atm, 273 K. Rule: PV = nRT (R = 0.082057). Steps: V = nRT/P = (1.0)(0.082057)(273)/1.0 = 22.4 L. Answer: 22.4 L."
+    ]
+   },
+   {
+    "h": "Remember",
+    "items": [
+     "Write the rule first, plug in with units, cancel units, then round. Carry units all the way to the final answer."
     ]
    }
   ]

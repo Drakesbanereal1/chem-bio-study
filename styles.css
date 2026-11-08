@@ -322,3 +322,6 @@ details.studysec[open]>summary{border-bottom:1px solid var(--line)}
 .studysec-body{padding:6px 16px 14px}
 .studysec-body ul{margin:8px 0 2px;padding-left:22px}
 .studysec-body li{margin:7px 0;line-height:1.5}
+
+/* ensure the hidden attribute always wins over display rules (.btn, .timer, etc.) */
+[hidden]{display:none !important}

@@ -130,13 +130,17 @@
       { id:"ch16", label:"Chapter 16 - Carbohydrates", topics:[
         { id:"carbs", label:"Carbohydrates" } ] },
       { id:"ch17", label:"Chapter 17 - Carboxylic Acids, Esters & Amides", topics:[
-        { id:"aea", label:"Carboxylic acids, esters & amides" } ] },
+        { id:"acids", label:"Carboxylic acids" },
+        { id:"esters", label:"Esters & esterification" },
+        { id:"hydrolysis", label:"Acidic hydrolysis vs saponification" },
+        { id:"amides", label:"Amides" } ] },
       { id:"ch18", label:"Chapter 18 - Lipids", topics:[
         { id:"fattyacids", label:"Fatty acids & melting point" },
         { id:"waxestag", label:"Waxes & triacylglycerols" },
-        { id:"membranes", label:"Phospholipids & membranes" },
-        { id:"steroids", label:"Steroids & lipoproteins" },
-        { id:"eicosanoids", label:"Eicosanoids & NSAIDs" } ] },
+        { id:"membranes", label:"Phospholipids & cell membranes" },
+        { id:"sphingomyelin", label:"Sphingomyelin & myelin" },
+        { id:"steroids", label:"Steroids, cholesterol, HDL & LDL" },
+        { id:"eicosanoids", label:"Prostaglandins, leukotrienes & NSAIDs" } ] },
       { id:"unit7", label:"Unit 7 - Bisphenols & Hormone Mimics", topics:[
         { id:"bisphenols", label:"Bisphenols & hormone mimics" } ] },
       { id:"skills", label:"Skills & Review (Ch 13-16)", topics:[
@@ -723,11 +727,11 @@
       var secs = doc.sections || [];
       if (secs.length) {
         var tools = document.createElement("div"); tools.className = "studytools";
-        var expand = document.createElement("button"); expand.type = "button"; expand.className = "btn btn-ghost btn-sm"; expand.textContent = "Expand all sections";
+        var expand = document.createElement("button"); expand.type = "button"; expand.className = "btn btn-ghost btn-sm"; expand.textContent = "Collapse all sections";
         tools.appendChild(expand); body.appendChild(tools);
         var detailsEls = [];
         secs.forEach(function (sec) {
-          var d = document.createElement("details"); d.className = "studysec";
+          var d = document.createElement("details"); d.className = "studysec"; d.open = true;
           var sm = document.createElement("summary"); sm.textContent = sec.h; d.appendChild(sm);
           var inner = document.createElement("div"); inner.className = "studysec-body";
           if (sec.fig) {
@@ -756,12 +760,30 @@
     var pb = $("studyPracticeBtn");
     var qn = qForTopic(subjectId, chapterId, topicId).length;
     if (qn) { pb.hidden = false; pb.textContent = "Quiz this topic (" + qn + ")"; } else { pb.hidden = true; }
+    var nb = $("studyNextBtn");
+    if (nb) {
+      var nextId = nextStudyTopicId(subjectId, chapterId, topicId);
+      if (nextId) { var nt = getTopic(subjectId, chapterId, nextId); nb.hidden = false; nb.textContent = "Next topic: " + (nt ? nt.label : nextId) + " →"; }
+      else { nb.hidden = true; }
+    }
     $("navbar").hidden = true; $("timer").hidden = true; $("answeredStat").hidden = true;
     showScreen("studyScreen");
   }
   function quizThisTopic() {
     if (!currentStudy) return;
     startTopicQuiz(currentStudy.subjectId, currentStudy.chapterId, currentStudy.topicId);
+  }
+  function nextStudyTopicId(subjectId, chapterId, topicId) {
+    var ch = getChapter(subjectId, chapterId); if (!ch) return null;
+    var idx = -1, i;
+    for (i = 0; i < ch.topics.length; i++) if (ch.topics[i].id === topicId) { idx = i; break; }
+    for (var j = idx + 1; j < ch.topics.length; j++) if (studyFor(subjectId, chapterId, ch.topics[j].id)) return ch.topics[j].id;
+    return null;
+  }
+  function nextStudyTopic() {
+    if (!currentStudy) return;
+    var nid = nextStudyTopicId(currentStudy.subjectId, currentStudy.chapterId, currentStudy.topicId);
+    if (nid) openStudyTopic(currentStudy.subjectId, currentStudy.chapterId, nid);
   }
   function goHome() {
     stopTimer(); session = null;
@@ -792,6 +814,7 @@
     showScreen("homeScreen");
 
     if ($("studyPracticeBtn")) $("studyPracticeBtn").addEventListener("click", quizThisTopic);
+    if ($("studyNextBtn")) $("studyNextBtn").addEventListener("click", nextStudyTopic);
     if ($("studyBackBtn")) $("studyBackBtn").addEventListener("click", goHome);
     if ($("studyBackBtn2")) $("studyBackBtn2").addEventListener("click", goHome);
 

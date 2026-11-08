@@ -13,7 +13,7 @@
 <meta name="apple-mobile-web-app-title" content="Chem &amp; Bio">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="styles.css?v=10">
+<link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 
@@ -158,12 +158,13 @@
 <!-- ===== STUDY ===== -->
 <section class="screen" id="studyScreen">
   <div class="card">
-    <button class="btn btn-ghost" id="studyBackBtn">&larr; Back to menu</button>
+    <button class="btn btn-ghost" id="studyBackBtn">&larr; Back to Topics</button>
     <h1 class="title" id="studyTitle" style="margin-top:10px"></h1>
     <div id="studyBody" class="studybody"></div>
     <div class="actions" style="margin-top:16px">
       <button class="btn btn-primary" id="studyPracticeBtn">Quiz this topic</button>
-      <button class="btn btn-ghost" id="studyBackBtn2">Back to menu</button>
+      <button class="btn btn-ghost" id="studyNextBtn" hidden>Next topic</button>
+      <button class="btn btn-ghost" id="studyBackBtn2">Back to Topics</button>
     </div>
   </div>
 </section>
@@ -204,9 +205,9 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="questions.js?v=13"></script>
-<script src="study.js?v=14"></script>
-<script src="app.js?v=10"></script>
+<script src="questions.js?v=14"></script>
+<script src="study.js?v=15"></script>
+<script src="app.js?v=11"></script>
 <script>
   /* Offline PWA support — only registers when served over http(s); harmless on file:// */
   if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
