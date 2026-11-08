@@ -50,6 +50,14 @@ window.STUDY_DATA = [
      "Acyclic alkane: CnH(2n+2).   One C=C: CnH(2n).   One C#C: CnH(2n-2).   Monocyclic alkane (one ring): CnH(2n).",
      "Degree of unsaturation: each ring = 1, each C=C = 1, each C#C = 2, each benzene ring = 4."
     ]
+   },
+   {
+    "h": "Worked example & the four additions",
+    "items": [
+     "The four addition reactions: hydrogenation (H2, metal catalyst), halogenation (X2), hydrohalogenation (HX), and acid-catalyzed hydration (H2O / H+).",
+     "Worked (Markovnikov): propene CH3CH=CH2 + HBr. H adds to the double-bond carbon that already has more H; Br adds to the other. The terminal CH2 becomes CH3; the middle CH gains Br -> CH3CHBrCH3 (2-bromopropane).",
+     "Remember: number the double bond first, then track those two carbons through the addition."
+    ]
    }
   ]
  },
@@ -99,6 +107,15 @@ window.STUDY_DATA = [
      "Maximum stereoisomers = 2^n (n = number of independent stereocenters). Symmetry (a meso form) can make the real count fewer.",
      "Alcohols can donate hydrogen bonds; ethers cannot."
     ]
+   },
+   {
+    "h": "Worked example: classify then oxidize",
+    "items": [
+     "Classify by counting carbon neighbors on the OH carbon: 1 neighbor = primary, 2 = secondary, 3 = tertiary.",
+     "Worked: CH3CH(OH)CH2CH3 + an oxidizing agent. The OH carbon has two carbon neighbors -> secondary -> oxidizes to a ketone: CH3C(=O)CH2CH3 (butan-2-one).",
+     "Oxidation ladder: primary -> aldehyde -> carboxylic acid; secondary -> ketone; tertiary -> no oxidation.",
+     "Remember: a chiral (stereo) center is a carbon with four different groups."
+    ]
    }
   ]
  },
@@ -131,6 +148,14 @@ window.STUDY_DATA = [
      "Hemiacetal + a 2nd ROH -> acetal: TWO -OR groups and no -OH.",
      "Ketones give the analogous hemiketal, then ketal.",
      "A molecule with both an aldehyde and an -OH can react with itself to form a cyclic hemiacetal."
+    ]
+   },
+   {
+    "h": "Worked example: hemiacetal vs acetal",
+    "items": [
+     "Aldehyde carbonyl is on C1 (chain end); ketone carbonyl is internal. On reduction an aldehyde gives a primary alcohol, a ketone a secondary alcohol.",
+     "Worked: ethanal CH3CHO + methanol (acid). One alcohol adds -> hemiacetal CH3CH(OH)(OCH3). With excess methanol the OH is replaced by OCH3 and water leaves -> acetal CH3CH(OCH3)2 + H2O.",
+     "Remember: a hemiacetal carbon has OH + OR; an acetal carbon has two OR groups."
     ]
    }
   ]
@@ -169,6 +194,14 @@ window.STUDY_DATA = [
      "Glycosidic bond: an oxygen bridge joining two sugars. Condensation releases water; hydrolysis adds water and splits them.",
      "Joining m units forms m-1 glycosidic bonds; 2 glucose -> C12H22O11 + H2O.  mono = 1, di = 2, poly = many."
     ]
+   },
+   {
+    "h": "Worked example: reducing sugar & anomers",
+    "items": [
+     "Glucose is an aldose (aldehyde); fructose is a ketose (ketone). Both are C6H12O6.",
+     "Worked: maltose has an alpha(1->4) bond. C1 of the first glucose is tied up in the linkage, but the second glucose keeps a free C1 (hemiacetal) that can open to an aldehyde -> maltose is a reducing sugar.",
+     "Remember: for D-glucose Haworth drawings, alpha has the anomeric OH pointing down and beta has it up."
+    ]
    }
   ]
  },
@@ -200,6 +233,14 @@ window.STUDY_DATA = [
      "Losing H+ gives the carboxylate anion R-COO- (acetic acid -> acetate, CH3COO-).",
      "Short carboxylic acids dissolve in water (the -COOH hydrogen-bonds); solubility falls as the chain grows.",
      "Remember: see -C(=O)-OH = carboxylic acid; it loses H+ to become R-COO-."
+    ]
+   },
+   {
+    "h": "Neutralization (worked)",
+    "items": [
+     "A carboxylic acid is neutralized by base: CH3CH2COOH + NaOH -> CH3CH2COO- Na+ + H2O (a 1:1 mole ratio).",
+     "Carboxylate resonance spreads the negative charge over both oxygens, which is why -COOH is only a weak acid.",
+     "Remember: R-COOH (acid) <-> R-COO- (its conjugate base)."
     ]
    }
   ]
@@ -276,6 +317,14 @@ window.STUDY_DATA = [
      "Acidic: 1 TAG + 3 H2O -> 1 glycerol + 3 fatty acids.",
      "Saponification: 1 TAG + 3 NaOH -> 1 glycerol + 3 soap (sodium) salts."
     ]
+   },
+   {
+    "h": "Saponification mole math (worked)",
+    "items": [
+     "Given 0.250 mol triacylglycerol + excess NaOH. Each TAG has 3 ester bonds -> 3 x 0.250 = 0.750 mol NaOH consumed and 0.750 mol sodium carboxylate formed.",
+     "One glycerol backbone per TAG -> 0.250 mol glycerol.",
+     "Remember: one hydrolysis event per ester cleaved; three esters per TAG."
+    ]
    }
   ]
  },
@@ -301,6 +350,14 @@ window.STUDY_DATA = [
     "items": [
      "In sphingomyelin the fatty acid's carbonyl carbon is joined to the NITROGEN of sphingosine: an amide bond, R-C(=O)-NH-sphingosine.",
      "Remember: carbonyl-carbon to nitrogen = amide; that is how the fatty-acid tail attaches in sphingomyelin."
+    ]
+   },
+   {
+    "h": "Amide classes & hydrolysis (worked)",
+    "items": [
+     "Amides are primary/secondary/tertiary by how many carbons sit on the nitrogen (named -amide, with N- locants for N-substituents).",
+     "Worked: N-methylethanamide CH3C(=O)NHCH3 + aqueous acid, heat. Break the acyl C-N bond -> acid side CH3COOH (ethanoic acid) + nitrogen side CH3NH3+ (protonated), 1:1.",
+     "Remember: find C(=O)-N to identify an amide, even when the nitrogen carries a carbon substituent."
     ]
    }
   ]
@@ -346,6 +403,14 @@ window.STUDY_DATA = [
      "Spotting cis: at each C=C the two chain pieces leave on the SAME side, kinking the chain (trans would stay straight).",
      "Remember: X:Y = (total carbons):(number of C=C). Count -COOH as C1 and never count the C=O as a double bond here."
     ]
+   },
+   {
+    "h": "Delta vs omega numbering (worked)",
+    "items": [
+     "Delta numbering counts a double bond from the COOH carbon; omega numbering counts from the methyl (CH3) end.",
+     "Worked: a 20:2 acid with double bonds at delta-11 and delta-14. From the methyl end the first double bond is at 20 - 14 = 6, so it is an omega-6 fatty acid.",
+     "Remember: delta counts from COOH, omega from CH3; X:Y gives total carbons : total C=C."
+    ]
    }
   ]
  },
@@ -375,6 +440,14 @@ window.STUDY_DATA = [
      "Complete acidic hydrolysis of one TAG: 3 H2O -> 1 glycerol + 3 free fatty acids. Saponification with 3 NaOH -> 1 glycerol + 3 soap (sodium) salts.",
      "Lipase hydrolyzes ester bonds in fats. Hydrogenation adds H2 across C=C (metal catalyst such as Ni), making a fat more saturated and firmer.",
      "Remember: hydrolysis splits ester bonds; hydrogenation converts C=C to C-C."
+    ]
+   },
+   {
+    "h": "Hydrogenation mole math (worked)",
+    "items": [
+     "Hydrogenation adds H2 across each C=C (metal catalyst such as Ni), making fats more saturated and firmer.",
+     "Worked: 0.200 mol TAG with three 18:1 tails (one C=C each) -> 3 C=C per TAG -> 3 x 0.200 = 0.600 mol H2 consumed, giving 0.200 mol TAG with three 18:0 tails.",
+     "Remember: one H2 per C=C hydrogenated; hydrolysis splits esters, hydrogenation changes the tails."
     ]
    }
   ]
@@ -456,6 +529,14 @@ window.STUDY_DATA = [
      "Cholesterol = the steroid core + an -OH + a hydrocarbon tail. Digoxin's steroid core is the same 6-6-6-5 cluster (its sugars and lactone are separate).",
      "LDL carries cholesterol TO tissues; HDL helps carry cholesterol FROM tissues back to the liver."
     ]
+   },
+   {
+    "h": "Spotting the steroid core (worked)",
+    "items": [
+     "Worked: given digoxin (attached sugars + a separate lactone + fused rings), trace only the rings that share edges. Count 6, 6, 6, 5 -> that 6-6-6-5 fused cluster is the steroid nucleus.",
+     "Cholesterol = the same core + an -OH + a hydrocarbon tail, and is a precursor to steroid hormones.",
+     "Remember: LDL delivers cholesterol to tissues; HDL helps return it to the liver."
+    ]
    }
   ]
  },
@@ -478,6 +559,13 @@ window.STUDY_DATA = [
      "Arachidonic acid (20:4) is the precursor. COX pathway -> prostaglandins (contribute to pain/inflammation); 5-LOX pathway -> leukotrienes.",
      "NSAIDs (nonsteroidal anti-inflammatory drugs) inhibit COX, which lowers prostaglandins.",
      "Remember: arachidonic acid feeds both pathways; COX -> prostaglandins, 5-LOX -> leukotrienes, NSAIDs act at COX."
+    ]
+   },
+   {
+    "h": "Tracing the pathway (worked)",
+    "items": [
+     "Worked: with a selective COX inhibitor, trace arachidonic acid (20:4) -> COX -> prostaglandins. Blocking COX lowers prostaglandins; the 5-LOX -> leukotriene branch is not the direct target.",
+     "Remember: COX makes the prostaglandin branch; 5-LOX makes the leukotriene branch; NSAIDs act at COX."
     ]
    }
   ]
@@ -541,6 +629,13 @@ window.STUDY_DATA = [
      "3. Modify the bonds.",
      "4. Check that every carbon still has 4 bonds."
     ]
+   },
+   {
+    "h": "Addition product (worked)",
+    "items": [
+     "Worked: cyclohexene + H2 (Ni). Find the ring C=C, add one H to each alkene carbon, change the double bond to single, keep the six-membered ring -> cyclohexane (1 mol H2 per mol cyclohexene).",
+     "Remember: start at the functional group the reagent actually changes."
+    ]
    }
   ]
  },
@@ -575,6 +670,14 @@ window.STUDY_DATA = [
      "Dilution - Given: 2.0 M stock; make 50. mL of 0.50 M. Rule: C1V1 = C2V2. Steps: V1 = C2V2/C1 = (0.50 M x 50. mL)/(2.0 M) = 12.5 mL. Answer: measure 12.5 mL stock, add water to 50. mL.",
      "Moles - Given: 36 g glucose, molar mass 180 g/mol. Rule: n = mass/molar mass. Steps: n = 36 g / 180 g/mol = 0.20 mol. Answer: 0.20 mol.",
      "Stereoisomers - Given: 2 chiral centers. Rule: max stereoisomers = 2^n. Steps: 2^2 = 4. Answer: 4 stereoisomers."
+    ]
+   },
+   {
+    "h": "DBE with heteroatoms (worked)",
+    "items": [
+     "Worked: C4H7ClO. DBE = (2C + 2 + N - H - X)/2 with X = halogens, O omitted = (2x4 + 2 - 7 - 1)/2 = (10 - 8)/2 = 1.",
+     "1 degree of unsaturation (a single C=O carbonyl could account for it).",
+     "Remember: define the symbols and count atoms before plugging in; omit O and S, count halogens as X."
     ]
    }
   ]
@@ -652,6 +755,19 @@ window.STUDY_DATA = [
      "Bacteria: no nucleus, coupled transcription/translation, 70S ribosomes, operons.  Eukaryotes: nuclear transcription, 80S ribosomes, mRNA splicing (introns out, exons kept).",
      "DNA math: A pairs with T, G with C. If T = 20%, then C = 30%."
     ]
+   },
+   {
+    "h": "Worked examples & key processes",
+    "items": [
+     "Base-pair math (Chargaff): in dsDNA, A = T and G = C. If T = 20%, then A = 20%, so G + C = 100% - 40% = 60% and C = 60%/2 = 30%.",
+     "Central dogma: replication copies DNA -> DNA; transcription writes DNA -> RNA (RNA polymerase reads the template 3'->5' and builds RNA 5'->3'); translation reads mRNA -> protein.",
+     "Replication order: 1) helicase opens the fork (gyrase relieves twisting ahead); 2) primase lays RNA primers; 3) DNA polymerase extends 5'->3' (continuous on the leading strand, Okazaki fragments on the lagging); 4) primers removed, gaps filled, ligase seals the nicks.",
+     "Translation sites: A = arrival (incoming charged tRNA), P = holds the growing peptide, E = exit. The initiator tRNA starts in P (bacteria use fMet).",
+     "Codon worked example: 5'-AUG CCU UAA-3' = AUG (Met / start) + CCU (Pro) + UAA (stop) -> a two-amino-acid peptide.",
+     "lac operon (check lactose, then glucose): no lactose -> LacI repressor binds the operator -> very low expression. Lactose present -> allolactose lifts the repressor. Low glucose -> cAMP rises -> CAP-cAMP boosts transcription. (Lactose releases the brake; low glucose adds the boost.)",
+     "Sigma factors: a different sigma sends RNA polymerase to a different set of promoters, letting bacteria switch programs. In eukaryotes transcription/processing happen in the nucleus and translation in the cytoplasm.",
+     "Remember: replication copies, transcription makes RNA, translation builds protein."
+    ]
    }
   ]
  },
@@ -701,6 +817,19 @@ window.STUDY_DATA = [
      "Ames test: compare chemical-treated revertants to an untreated control. Many more revertants supports mutagenicity.",
      "Mutagen = causes mutations; carcinogen = causes cancer. A positive Ames result does not by itself prove human cancer."
     ]
+   },
+   {
+    "h": "Worked examples & key processes",
+    "items": [
+     "Mutation types: silent (same amino acid), missense (swap), nonsense (new stop), frameshift (indel that shifts the reading frame).",
+     "Frameshift test: a coding insertion/deletion shifts the frame if its length is NOT divisible by 3. A 4-base deletion -> 4/3 leaves remainder 1 -> frameshift. A 3-base deletion -> remainder 0 -> frame preserved.",
+     "Mutation example on 5'-AUG UAU GAA UAA-3': UAU->UAC = silent; UAU->UGU = missense; UAU->UAA = nonsense; delete the first U and regroup = frameshift.",
+     "Repair order: detect the damage in one strand -> excise the damaged segment -> use the intact opposite strand to fill the gap -> ligase seals the nick.",
+     "Replica plating (set math): colonies on glucose-salts agar (GSA) = {1,2,3,9}; on GSA + leucine = {1,2,3,4,6,8,9}. Rescued only by leucine = {4,6,8} -> 3 leucine auxotrophs.",
+     "Horizontal gene transfer: transformation (cell takes up free DNA), conjugation (donor-recipient contact), transduction (a phage carries DNA; generalized = random bacterial DNA packaged, specialized = adjacent genes from faulty prophage excision).",
+     "Ames test (worked): 8 control revertants vs 160 treated = 160/8 = 20-fold increase -> supports mutagenicity. Frequency = 20 revertants / 1,000,000 cells = 0.00002 = 0.002%.",
+     "Remember: same/swap/stop/shift tells you what happened; compare the treated plate to the untreated baseline."
+    ]
    }
   ]
  },
@@ -742,6 +871,18 @@ window.STUDY_DATA = [
      "Expression microarray colors: reference = green, experimental = red. Red = higher experimental, yellow = both, dark = little signal. A transcript signal is NOT a direct protein count.",
      "Insulin example: put an intron-free human coding sequence with bacterial expression controls into E. coli; the shared genetic code lets bacterial ribosomes read it (active protein also needs processing/purification)."
     ]
+   },
+   {
+    "h": "Worked examples & key processes",
+    "items": [
+     "PCR needs template, two primers (anneal on opposite strands, 3' ends pointing inward), thermostable polymerase (Taq), dNTPs, and buffer. Cycle: denature ~95 C -> anneal (primer-dependent temp) -> extend ~72 C; repeat.",
+     "PCR amount (worked): molecules = starting x 2^cycles. 1 template x 2^3 = 8 copies after 3 ideal cycles.",
+     "Cloning order: cut vector and insert to compatible ends -> ligase joins them -> introduce into a host -> select for plasmid-bearing colonies (resistance marker) -> screen / sequence for the correct insert. (A resistant colony can still carry an empty vector.)",
+     "cDNA & Sanger: reverse transcriptase makes cDNA from mRNA; Sanger extends a primer with dNTPs + labeled ddNTPs (a ddNTP lacks the 3'-OH, so it stops the chain).",
+     "Sanger read (worked): terminating bases from shortest to longest A, C, G, T -> new strand 5'-ACGT-3'. On a sizing gel, a band level with the 500-bp ladder band is about 500 bp.",
+     "Microarray (worked): experimental red = 240, reference green = 80 -> red/green = 3.0-fold higher expression (a signal ratio, not an absolute protein count). Red = experimental higher, green = reference higher, yellow = both, dark = little signal.",
+     "Remember: denature separates, anneal sticks, extend synthesizes; for cloning: cut, join, introduce, select, verify."
+    ]
    }
   ]
  },
@@ -782,6 +923,96 @@ window.STUDY_DATA = [
      "16S rRNA gene: a bacterial marker (conserved + variable regions). Higher G+C generally means a higher DNA melting temperature.",
      "An identical short 16S does NOT prove the same strain - combine sequence quality, coverage and phenotype.",
      "BLAST finds similar database sequences; Clustal aligns multiple sequences. A top hit is evidence, not automatic proof."
+    ]
+   },
+   {
+    "h": "Worked examples & key processes",
+    "items": [
+     "Three tasks: classification (group organisms), identification (name an unknown), strain typing (tell isolates of one species apart).",
+     "Five typing methods matched to their evidence: biochemical (metabolic reactions), serological (antigen-antibody), molecular (DNA pattern/sequence), phage typing (susceptibility to specific phages), antibiogram (antibiotic-susceptibility pattern).",
+     "Dichotomous key (example path): Gram-negative rod -> oxidase positive (Pseudomonas) or negative; if negative, lactose acid/gas positive (E. coli / coliform) or negative (Proteus). Follow one branch per test result.",
+     "16S identity (worked): 98 matches over a 100-base aligned region = 98% identity. Coverage = 100 aligned / 500 query = 20%. High identity still needs adequate coverage and quality to support an ID.",
+     "GC content (worked): 36 G + 34 C in 200 bases = (36 + 34)/200 = 35% GC.",
+     "Viable plate count (worked): three 1:10 dilutions = 10^-3 total; 0.10 mL plated; 72 colonies. Original = 72 / (0.10 mL x 10^-3) = 72 / 0.00010 = 7.2 x 10^5 CFU/mL.",
+     "Remember: match the typing name to the feature it measures; for CFU, divide by the volume plated and by the dilution."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_skills_readstructure",
+  "subjectId": "chem",
+  "chapterId": "skills",
+  "topicId": "readstructure",
+  "title": "Read the structure (Ch 13-16)",
+  "overview": "How to read a line-angle (skeletal) drawing: find the carbons, fill in the hidden hydrogens, and name the functional group.",
+  "sections": [
+   {
+    "h": "Reading a line-angle drawing",
+    "items": [
+     "Every line end and every corner is a carbon. A plain line is a single bond; two parallel lines = a double bond; three = a triple bond.",
+     "Each carbon is assumed to carry enough H atoms to reach 4 bonds total. Only N, O, S (and their H) are drawn explicitly.",
+     "Find the functional group first (C=O, -OH, -COOH, C=C, ring), then number the longest chain that contains it."
+    ]
+   },
+   {
+    "h": "Worked example",
+    "items": [
+     "Given a three-carbon zigzag ending in C(=O)OH: the acid carbon is C1, the corner is C2 (CH2), the far endpoint is C3 (CH3).",
+     "That is CH3CH2COOH = propanoic acid (3 carbons).",
+     "Remember: count atoms first, then use the neighboring atoms to identify the group."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_skills_formulas",
+  "subjectId": "chem",
+  "chapterId": "skills",
+  "topicId": "formulas",
+  "title": "Formulas & counting (Ch 13-16)",
+  "overview": "Molecular-formula patterns and degrees of unsaturation (DBE) for simple hydrocarbons.",
+  "sections": [
+   {
+    "h": "Formula patterns",
+    "items": [
+     "Alkane = CnH(2n+2); one C=C -> CnH(2n); one C#C (triple bond) -> CnH(2n-2).",
+     "Degrees of unsaturation (DBE) = rings + pi bonds. One ring or one double bond = 1 DBE; one triple bond = 2.",
+     "General: DBE = (2C + 2 + N - H - X)/2, where X = halogens. O and S are omitted."
+    ]
+   },
+   {
+    "h": "Worked example",
+    "items": [
+     "Given C5H8: DBE = (2x5 + 2 - 8)/2 = (12 - 8)/2 = 2.",
+     "So C5H8 has 2 degrees of unsaturation (for example one ring + one C=C, or one triple bond).",
+     "Remember: one ring or double bond adds 1 DBE; one triple bond adds 2."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_skills_esters",
+  "subjectId": "chem",
+  "chapterId": "skills",
+  "topicId": "esters",
+  "title": "Esters & biomolecules (optional)",
+  "overview": "Spotting the ester pattern C(=O)-O-C and reading its name. (See Chapter 17 for how esters form and break.)",
+  "sections": [
+   {
+    "h": "Recognize an ester",
+    "items": [
+     "An ester is the C(=O)-O-C pattern. The carbonyl-containing piece comes from the acid; the group beyond the single-bond oxygen comes from the alcohol.",
+     "Name it alcohol-part first (as an alkyl), then the acid part as -anoate.",
+     "For reaction conditions (esterification, acidic hydrolysis, saponification) see Chapter 17."
+    ]
+   },
+   {
+    "h": "Worked example",
+    "items": [
+     "Given CH3CH2C(=O)OCH3: acid side = CH3CH2C(=O)- (propanoate); alcohol side = -OCH3 (methyl).",
+     "Name: methyl propanoate.",
+     "Remember: the group on the single-bond oxygen gives the first word of the ester name."
     ]
    }
   ]
