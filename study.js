@@ -201,6 +201,76 @@ window.STUDY_DATA = [
     "16S rRNA gene: a bacterial marker (conserved + variable regions). Higher G+C generally means a higher DNA melting temperature.",
     "An identical short 16S does NOT prove the same strain - combine sequence quality, coverage and phenotype.",
     "BLAST finds similar database sequences; Clustal aligns multiple sequences. A top hit is evidence, not automatic proof." ]}
+]},
+
+/* ================= CHEM 131 — Chapters 17 & 18 (Acids/Esters/Amides & Lipids) ================= */
+
+{ id:"SC17", title:"Ch 17 - Carboxylic Acids, Esters & Amides", sub:"Chemistry Chapter 17",
+  practiceSub:"Ch 17: Carboxylic Acids, Esters & Amides", sections:[
+  { h:"Three key groups", items:[
+    "Carboxylic acid: R-C(=O)-OH (also written R-COOH). Its deprotonated form is the carboxylate, R-COO-.",
+    "Ester: R-C(=O)-O-R' (an oxygen bonded to the carbonyl carbon AND a second carbon group).",
+    "Amide: a carbonyl carbon bonded directly to nitrogen, R-C(=O)-NH-R'." ]},
+  { h:"Ester formation & hydrolysis", items:[
+    "A carboxylic acid + an alcohol form an ester + water (acid-catalyzed esterification). A wax ester = one fatty acid + one long-chain alcohol.",
+    "Acidic hydrolysis: ester + water -> carboxylic acid (R-COOH) + alcohol.",
+    "Basic hydrolysis (saponification): ester + NaOH -> sodium carboxylate (R-COO- Na+) + alcohol. Long-chain salts are soaps.",
+    "The bond cleaved is between the carbonyl carbon and the single-bond oxygen; the C=O stays in the acid product.",
+    "Remember: acidic hydrolysis gives R-COOH; basic hydrolysis gives R-COO-." ]},
+  { h:"The amide in sphingomyelin", items:[
+    "The fatty acid's carbonyl carbon bonds to the nitrogen of sphingosine, forming R-C(=O)-NH-sphingosine (an amide bond)." ]}
+]},
+
+{ id:"SC18A", title:"Ch 18 - Fatty Acids, Waxes & Triacylglycerols", sub:"Chemistry Chapter 18",
+  practiceSub:"Ch 18: Fatty Acids & Melting Point", sections:[
+  { h:"Fatty-acid structure & X:Y notation", items:[
+    "A fatty acid = a hydrocarbon chain + a terminal -COOH. Start counting at the carboxyl carbon = C1; each corner/line end is a carbon.",
+    "X:Y notation: X = total carbons, Y = number of carbon-carbon double bonds (the carbonyl C=O does NOT count).",
+    "Saturated = zero C=C. Stearic acid is 18:0 = CH3(CH2)16COOH.",
+    "delta-11 (Delta 11) means a double bond at C11=C12 counting from -COOH." ]},
+  { h:"cis / trans & melting point", items:[
+    "A cis double bond puts the chain segments on the same side and bends the chain; a trans double bond keeps it straighter.",
+    "Tighter packing generally raises melting point: a cis-unsaturated fatty acid usually melts LOWER than its trans isomer.",
+    "Remember: count -COOH as C1, count only C=C bonds after the colon, and cis bends = looser packing." ]},
+  { h:"Waxes, triacylglycerols & their reactions", items:[
+    "Wax ester = one fatty acid + one long-chain alcohol (one ester bond).",
+    "Triacylglycerol (TAG) = glycerol + three fatty acids by three ester bonds; TAGs store energy.",
+    "Complete acidic hydrolysis of one TAG: 3 H2O -> 1 glycerol + 3 free fatty acids. Saponification with 3 NaOH -> 1 glycerol + 3 soap (sodium) salts.",
+    "Lipase hydrolyzes ester bonds in fats. Hydrogenation adds H2 across C=C (metal catalyst such as Ni), making a fat more saturated and firmer.",
+    "Remember: hydrolysis splits ester bonds; hydrogenation converts C=C to C-C." ]}
+]},
+
+{ id:"SC18B", title:"Ch 18 - Membranes, Steroids & Eicosanoids", sub:"Chemistry Chapter 18",
+  practiceSub:"Ch 18: Membrane Lipids & Fluid Mosaic", sections:[
+  { h:"Membrane lipids", items:[
+    "Glycerophospholipid = glycerol backbone + two ester-linked fatty-acid tails + a phosphate-containing polar head.",
+    "Sphingomyelin = sphingosine (its own hydrocarbon tail) + one amide-linked fatty acid (the second tail) + a phosphate head. It is a key lipid in myelin.",
+    "Phospholipids are amphipathic: polar heads face water on both sides of a bilayer; nonpolar tails point inward." ]},
+  { h:"Fluid mosaic model", items:[
+    "Lipids and many proteins move laterally. Integral proteins are embedded, transmembrane proteins span the membrane, peripheral proteins sit on a surface.",
+    "Cholesterol sits among the lipids; surface carbohydrates help with cell recognition.",
+    "cis-unsaturated tails pack less tightly and generally increase membrane fluidity." ]},
+  { h:"Steroids & lipoproteins", items:[
+    "Steroid skeleton = four fused rings (A, B, C are six-membered; D is five-membered = 6-6-6-5). Fused rings share an edge.",
+    "Cholesterol = the steroid core + an -OH + a hydrocarbon tail. Digoxin's steroid core is the same 6-6-6-5 cluster (its sugars and lactone are separate).",
+    "LDL carries cholesterol TO tissues; HDL helps carry cholesterol FROM tissues back to the liver." ]},
+  { h:"Eicosanoids & NSAIDs", items:[
+    "Arachidonic acid (20:4) is the precursor. COX pathway -> prostaglandins (contribute to pain/inflammation); 5-LOX pathway -> leukotrienes.",
+    "NSAIDs (nonsteroidal anti-inflammatory drugs) inhibit COX, which lowers prostaglandins.",
+    "Remember: arachidonic acid feeds both pathways; COX -> prostaglandins, 5-LOX -> leukotrienes, NSAIDs act at COX." ]}
+]},
+
+{ id:"SU7", title:"Unit 7 - Bisphenols & Hormone Mimics", sub:"Chemistry Unit 7",
+  practiceSub:"Unit 7: Bisphenols & Hormone Mimics", sections:[
+  { h:"BPA / BPS / BPF structure", items:[
+    "All three have two benzene rings, each with one phenolic -OH opposite the bridge that connects the rings.",
+    "Bridges differ: BPA = -C(CH3)2-, BPF = -CH2-, BPS = a sulfone bridge -S(=O)2-.",
+    "Phenolic -OH groups hydrogen-bond with water; the aromatic rings limit water solubility (BPS's sulfone oxygens can also accept H-bonds)." ]},
+  { h:"Hormone mimicry & timing", items:[
+    "A hormone is a chemical messenger (growth, metabolism, reproduction). BPA can bind certain estrogen receptors and mimic some estrogen signals.",
+    "Shared structure makes similar activity plausible; differences in the bridges can affect how strongly each molecule binds.",
+    "Hormone signals act at low concentrations, and exposure TIMING matters because they guide development before birth and during puberty.",
+    "Remember: shared phenolic groups explain possible similar activity; exposure during sensitive stages can matter even at low levels." ]}
 ]}
 
 ];
