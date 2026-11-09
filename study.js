@@ -248,7 +248,10 @@ window.STUDY_DATA = [
      "The -OH hydrogen can leave, so a carboxylic acid is a WEAK acid.",
      "Losing H+ gives the carboxylate anion R-COO- (acetic acid -> acetate, CH3COO-).",
      "Short carboxylic acids dissolve in water (the -COOH hydrogen-bonds); solubility falls as the chain grows.",
-     "Remember: see -C(=O)-OH = carboxylic acid; it loses H+ to become R-COO-."
+     "Remember: see -C(=O)-OH = carboxylic acid; it loses H+ to become R-COO-.",
+     "In water a carboxylic acid is only PARTLY ionized: R-COOH + H2O <=> R-COO- + H3O+ (a weak acid).",
+     "Its acid dissociation constant Ka = ([R-COO-][H3O+]) / [R-COOH] is small (about 10^-4 to 10^-5), so the undissociated acid dominates in plain water.",
+     "A strong base (NaOH or KOH) removes the proton far more completely, giving the carboxylate salt and raising water solubility (e.g., aspirin taken as its salt)."
     ]
    },
    {
@@ -340,6 +343,17 @@ window.STUDY_DATA = [
      "Given 0.250 mol triacylglycerol + excess NaOH. Each TAG has 3 ester bonds -> 3 x 0.250 = 0.750 mol NaOH consumed and 0.750 mol sodium carboxylate formed.",
      "One glycerol backbone per TAG -> 0.250 mol glycerol.",
      "Remember: one hydrolysis event per ester cleaved; three esters per TAG."
+    ]
+   },
+   {
+    "h": "Soap micelles: head out, tail in",
+    "fig": "<svg viewBox=\"0 0 620 292\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui,Arial,sans-serif\"><text x=\"20\" y=\"22\" font-size=\"14\" font-weight=\"700\" fill=\"#1f2d3a\">Soap micelle: polar heads out, nonpolar tails in</text><circle cx=\"310\" cy=\"152\" r=\"46\" fill=\"#f0d8a8\" stroke=\"#a86b1f\" stroke-width=\"1.5\"/><text x=\"310\" y=\"148\" font-size=\"11\" font-weight=\"700\" fill=\"#7a4e12\" text-anchor=\"middle\">OIL /</text><text x=\"310\" y=\"162\" font-size=\"11\" font-weight=\"700\" fill=\"#7a4e12\" text-anchor=\"middle\">GREASE</text><g stroke=\"#a86b1f\" stroke-width=\"2\" stroke-linecap=\"round\"><line x1=\"428\" y1=\"152\" x2=\"368\" y2=\"152\"/><line x1=\"419\" y1=\"197\" x2=\"364\" y2=\"174\"/><line x1=\"393\" y1=\"235\" x2=\"351\" y2=\"193\"/><line x1=\"355\" y1=\"261\" x2=\"332\" y2=\"206\"/><line x1=\"310\" y1=\"270\" x2=\"310\" y2=\"210\"/><line x1=\"265\" y1=\"261\" x2=\"288\" y2=\"206\"/><line x1=\"227\" y1=\"235\" x2=\"269\" y2=\"193\"/><line x1=\"201\" y1=\"197\" x2=\"256\" y2=\"174\"/><line x1=\"192\" y1=\"152\" x2=\"252\" y2=\"152\"/><line x1=\"201\" y1=\"107\" x2=\"256\" y2=\"130\"/><line x1=\"227\" y1=\"69\" x2=\"269\" y2=\"111\"/><line x1=\"265\" y1=\"43\" x2=\"288\" y2=\"98\"/><line x1=\"310\" y1=\"34\" x2=\"310\" y2=\"94\"/><line x1=\"355\" y1=\"43\" x2=\"332\" y2=\"98\"/><line x1=\"393\" y1=\"69\" x2=\"351\" y2=\"111\"/><line x1=\"419\" y1=\"107\" x2=\"364\" y2=\"130\"/></g><g fill=\"#157a86\"><circle cx=\"428\" cy=\"152\" r=\"7\"/><circle cx=\"419\" cy=\"197\" r=\"7\"/><circle cx=\"393\" cy=\"235\" r=\"7\"/><circle cx=\"355\" cy=\"261\" r=\"7\"/><circle cx=\"310\" cy=\"270\" r=\"7\"/><circle cx=\"265\" cy=\"261\" r=\"7\"/><circle cx=\"227\" cy=\"235\" r=\"7\"/><circle cx=\"201\" cy=\"197\" r=\"7\"/><circle cx=\"192\" cy=\"152\" r=\"7\"/><circle cx=\"201\" cy=\"107\" r=\"7\"/><circle cx=\"227\" cy=\"69\" r=\"7\"/><circle cx=\"265\" cy=\"43\" r=\"7\"/><circle cx=\"310\" cy=\"34\" r=\"7\"/><circle cx=\"355\" cy=\"43\" r=\"7\"/><circle cx=\"393\" cy=\"69\" r=\"7\"/><circle cx=\"419\" cy=\"107\" r=\"7\"/></g><text x=\"30\" y=\"60\" font-size=\"12\" font-weight=\"700\" fill=\"#157a86\">WATER (outside)</text><text x=\"470\" y=\"80\" font-size=\"11\" font-weight=\"700\" fill=\"#157a86\">polar heads</text><line x1=\"466\" y1=\"76\" x2=\"434\" y2=\"104\" stroke=\"#157a86\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"470\" y=\"236\" font-size=\"11\" font-weight=\"700\" fill=\"#a86b1f\">nonpolar tails</text><line x1=\"466\" y1=\"232\" x2=\"372\" y2=\"178\" stroke=\"#a86b1f\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/><text x=\"20\" y=\"276\" font-size=\"11\" fill=\"#5f5e5a\">A soap is amphipathic: the charged head faces water, the tail hides from it, so grease collects in the nonpolar core.</text><text x=\"20\" y=\"290\" font-size=\"12\" font-weight=\"700\" fill=\"#15687e\">Remember: head OUT, tail IN - grease is trapped in the nonpolar center.</text></svg>",
+    "figcap": "Saponification makes soap - an amphipathic fatty-acid salt. In water the charged heads face out and the nonpolar tails cluster in, trapping grease in the core.",
+    "items": [
+     "Saponification of a fat makes soap: a fatty-acid salt with a charged -COO- head and a long hydrocarbon tail (amphipathic).",
+     "In water the charged heads face outward toward the water and the tails cluster inward, forming a micelle.",
+     "Grease and oil dissolve into the nonpolar core, so the whole micelle disperses and rinses away.",
+     "Remember: head OUT, tail IN - grease hides in the nonpolar center."
     ]
    }
   ]
