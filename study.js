@@ -1090,5 +1090,327 @@ window.STUDY_DATA = [
     ]
    }
   ]
+ },
+ {
+  "id": "ST_bio13_structure",
+  "subjectId": "bio",
+  "chapterId": "bio13",
+  "topicId": "structure",
+  "title": "Virus structure & classification",
+  "overview": "Viruses are acellular: genetic material (DNA or RNA) in a protein capsid, with no ribosomes and no metabolism of their own. They must use a host cell to replicate.",
+  "sections": [
+   {
+    "h": "Parts of a virus",
+    "items": [
+     "Capsid: the protein coat protecting the viral genome. Nucleocapsid: the genome plus its capsid.",
+     "Virion: a complete, infectious virus particle.",
+     "Envelope: an outer lipid membrane taken from a host membrane, usually during budding.",
+     "Spikes: viral surface proteins that bind specific host-cell receptors.",
+     "Host range / tropism: which cells a virus can infect - set mainly by matching receptors and host factors."
+    ]
+   },
+   {
+    "h": "How viruses are classified",
+    "items": [
+     "By genome: DNA or RNA; single- or double-stranded; for RNA, positive or negative sense.",
+     "By shape (helical, icosahedral, complex), by envelope (enveloped vs non-enveloped), and by host range (bacteriophages, plant, animal).",
+     "NOT by metabolism: biochemical/fermentation tests used for bacteria do not classify viruses, which have no metabolism.",
+     "Remember: classify a virus by genome, shape, envelope and host range - never by metabolism."
+    ]
+   },
+   {
+    "h": "Positive-sense vs negative-sense RNA",
+    "items": [
+     "(+)-sense RNA can act as mRNA directly - ribosomes read it (+ = ready to read).",
+     "(-)-sense RNA must first be copied into complementary (+)-sense mRNA by a viral RNA-dependent RNA polymerase (- = must make +).",
+     "Every virus must ultimately supply (+)-sense mRNA, because ribosomes translate mRNA, not negative-sense RNA.",
+     "Exam cue: if the viral mRNA is complementary to the genome, the genome is negative-sense.",
+     "Remember: ribosomes read (+)-sense mRNA; a (-) genome has to make a (+) copy first."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_bio13_replication",
+  "subjectId": "bio",
+  "chapterId": "bio13",
+  "topicId": "replication",
+  "title": "Virus replication & the lytic cycle",
+  "overview": "The bacteriophage productive (lytic) cycle has five steps in a fixed order. Compare it with the lysogenic cycle, where the genome lies dormant as a prophage.",
+  "sections": [
+   {
+    "h": "The lytic cycle - five steps in order",
+    "items": [
+     "1. Attachment (adsorption): tail fibers bind specific receptors on the bacterial surface.",
+     "2. Penetration: the phage injects its genetic material into the host.",
+     "3. Biosynthesis: host machinery is redirected to copy viral nucleic acid and make viral proteins.",
+     "4. Maturation (assembly): genomes and protein parts assemble into complete virions.",
+     "5. Release: the cell lyses and new virions leave (release is LAST).",
+     "Order memory: Attach -> Penetrate -> Biosynthesize -> Mature -> Release (Attach, Enter, Make parts, Assemble, Exit).",
+     "Remember: a virus must attach, enter, make parts and assemble BEFORE it can be released."
+    ]
+   },
+   {
+    "h": "Lytic vs lysogenic",
+    "items": [
+     "Lytic: active production and assembly of new viruses, ending in release (often by lysis).",
+     "Lysogenic: the phage genome stays in the bacterium as a prophage (often integrated into bacterial DNA); the host can divide without making new virions.",
+     "Induction can switch a prophage into the lytic cycle. Virions assemble only during the productive/lytic phase, not during dormancy.",
+     "Remember: lysogenic = dormant prophage (no new virions); lytic = active virus production."
+    ]
+   },
+   {
+    "h": "Animal viruses, envelopes & latency",
+    "items": [
+     "Animal virus replication: attachment -> entry -> uncoating -> genome & protein synthesis -> assembly -> release (budding, exocytosis or lysis).",
+     "Enveloped viruses carry host-derived membrane proteins that help entry; many acquire the envelope by budding.",
+     "Herpes simplex: after entry the capsid travels to a nuclear pore and the viral DNA enters the nucleus (the capsid does not enter intact).",
+     "Latent infection: the genome persists with little/no virus production and can reactivate later (HSV, varicella-zoster). Persistent infection keeps making particles over a long time - different from true latency.",
+     "Remember: animal viruses uncoat inside the cell; latency = a quiet genome that can reactivate."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_bio13_genetics",
+  "subjectId": "bio",
+  "chapterId": "bio13",
+  "topicId": "genetics",
+  "title": "Viral genetics, antigen changes & prions",
+  "overview": "The injected genome directs the new virions; influenza changes surface antigens by drift and shift; prions are infectious proteins with no genome.",
+  "sections": [
+   {
+    "h": "The genome directs the progeny",
+    "items": [
+     "New virions are encoded by the genome inside the capsid. A phage with a T2 protein coat but carrying T4 DNA makes progeny with T4 DNA and T4 proteins.",
+     "Remember: the injected genome (not the parent's coat) determines the offspring."
+    ]
+   },
+   {
+    "h": "Influenza: antigenic drift vs shift",
+    "items": [
+     "Antigenic drift: small, gradual mutations over time; often reduces existing immune recognition.",
+     "Antigenic shift: a large change from reassortment of genome segments when compatible segmented influenza viruses infect the same cell; can create new antigen combinations with little preexisting immunity.",
+     "Reassortment is NOT sexual reproduction - it is segment swapping.",
+     "Remember: drift = small mutations; shift = big reassortment of genome segments."
+    ]
+   },
+   {
+    "h": "Transduction, lysogenic conversion & prions",
+    "items": [
+     "Specialized transduction: an incorrectly excised prophage carries nearby bacterial genes into another cell (only genes near the insertion site).",
+     "Generalized transduction: packaging errors can transfer many different bacterial DNA fragments.",
+     "Lysogenic conversion: a prophage gives the bacterium a new trait (e.g., the ability to make certain toxins).",
+     "Prions are misfolded infectious PROTEINS (no DNA or RNA). The abnormal form (PrP-Sc) makes normal PrP-C misfold; accumulating abnormal protein damages brain tissue.",
+     "Remember: a prion is a protein-only infectious agent with no nucleic acid."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_bio19_patterns",
+  "subjectId": "bio",
+  "chapterId": "bio19",
+  "topicId": "patterns",
+  "title": "Disease patterns & rates",
+  "overview": "Epidemiology studies how disease is distributed and how often it occurs. Know the rate terms, the pattern terms, and how to compare rates between populations.",
+  "sections": [
+   {
+    "h": "Rate and burden terms",
+    "items": [
+     "Incidence: NEW cases in a population during a defined time interval.",
+     "Prevalence: ALL existing cases at a given time or interval.",
+     "Morbidity: illness/disease burden. Mortality: deaths.",
+     "Fast check: incidence = incoming new cases; prevalence = present total cases; morbidity = illness; mortality = death."
+    ]
+   },
+   {
+    "h": "Pattern terms & outbreak curves",
+    "items": [
+     "Sporadic: occurs only occasionally. Endemic: consistently present at an expected level in an area.",
+     "Outbreak: a localized cluster/increase. Epidemic: cases exceed what is expected. Pandemic: epidemic across multiple countries or continents.",
+     "Common-source epidemic: one shared exposure (e.g., contaminated food), often a single sharp peak. Propagated epidemic: person-to-person spread, often successive waves separated by incubation periods.",
+     "Remember: epidemic is more localized; pandemic crosses countries/continents."
+    ]
+   },
+   {
+    "h": "Comparing incidence between populations (worked)",
+    "items": [
+     "Rule: incidence proportion = new cases / population at risk x 100%.",
+     "Given: 100 new cases in a city of 100,000 vs 100 new cases in a town of 5,000, same interval.",
+     "City: 100 / 100,000 x 100 = 0.1% (100 per 100,000). Town: 100 / 5,000 x 100 = 2% (2,000 per 100,000).",
+     "The town's rate is 20x higher despite the same case count.",
+     "Remember: divide cases by the population at risk before comparing - compare rates, not raw counts."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_bio19_spread",
+  "subjectId": "bio",
+  "chapterId": "bio19",
+  "topicId": "spread",
+  "title": "How diseases spread",
+  "overview": "Know the sources and routes of transmission, healthcare-associated infection, and how incubation period affects outbreak control.",
+  "sections": [
+   {
+    "h": "Reservoir, vector, fomite, zoonosis",
+    "items": [
+     "Reservoir: the natural habitat where a pathogen normally persists (humans, animals, soil, water).",
+     "Vector: a living carrier that transmits an agent (mosquito carrying malaria; a tick carrying a pathogen).",
+     "Fomite: a nonliving object that can carry infectious material (contaminated phone, door handle, equipment).",
+     "Zoonosis: a disease transmitted naturally from animals to humans (rabies; leptospirosis from rodent urine).",
+     "Remember: reservoir = home of the pathogen; vector = living carrier; fomite = nonliving carrier."
+    ]
+   },
+   {
+    "h": "Transmission routes & nosocomial infection",
+    "items": [
+     "Routes: direct contact; fomite/indirect contact; droplet (close-range respiratory); airborne (inhaled aerosols); vehicle (food or water); vector-borne (mosquitoes, ticks, animals).",
+     "Healthcare-associated (nosocomial) infection: acquired in connection with medical care, not present when care began. Reservoirs include the patient's own skin microbiota, other patients, staff, or contaminated equipment (e.g., Staphylococcus epidermidis causing a catheter infection)."
+    ]
+   },
+   {
+    "h": "Incubation period",
+    "items": [
+     "Incubation period: time between exposure and symptom onset.",
+     "A long incubation can complicate outbreak control because infected people may travel/interact before symptoms appear. But a long incubation alone does not guarantee contagiousness.",
+     "Remember: symptoms can appear long after exposure, which makes tracking harder."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_bio19_public",
+  "subjectId": "bio",
+  "chapterId": "bio19",
+  "topicId": "public",
+  "title": "Eradication & public health",
+  "overview": "Understand why smallpox could be eradicated, what makes other diseases harder, and why historical death rates fell.",
+  "sections": [
+   {
+    "h": "Why smallpox was eradicated",
+    "items": [
+     "An effective vaccine made prevention possible.",
+     "Humans were the ONLY natural reservoir, so animals did not keep reintroducing the virus.",
+     "Recognizable symptoms helped case-finding, isolation and contact tracing; surveillance + targeted vaccination stopped transmission.",
+     "Smallpox was declared eradicated globally in 1980. Polio remains a major target because effective vaccines exist and humans are its main reservoir.",
+     "Remember: a human-only reservoir + an effective vaccine is what made eradication possible."
+    ]
+   },
+   {
+    "h": "Harder targets & why deaths fell",
+    "items": [
+     "Common cold: many distinct respiratory viruses (no universal vaccine). Anthrax: Bacillus anthracis forms persistent spores. Rabies: wild-animal reservoirs. Malaria: a mosquito vector. Leptospirosis: animal urine contaminates freshwater (zoonosis).",
+     "Historical drops in infectious-disease mortality came largely from clean water, sewage treatment, food safety, better living conditions, sanitation and vector control - even before antibiotics.",
+     "Google Flu Trends lesson: internet searches can hint at trends but are biased, imprecise, media-influenced, and missing where access is limited. Search activity is NOT the same as confirmed infections.",
+     "Remember: animal reservoirs and environmental spores make eradication hard; sanitation cut deaths before antibiotics."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_bio20_toxicity",
+  "subjectId": "bio",
+  "chapterId": "bio20",
+  "topicId": "toxicity",
+  "title": "Selective toxicity & spectrum",
+  "overview": "A good antibiotic harms the microbe more than the patient by hitting a bacterial feature humans lack. Know the targets, therapeutic index, spectrum, and cidal vs static.",
+  "sections": [
+   {
+    "h": "Selective toxicity: bacterial targets",
+    "items": [
+     "Peptidoglycan cell wall: beta-lactams (penicillin) block wall synthesis; human cells have no peptidoglycan.",
+     "70S bacterial ribosome: some drugs inhibit it rather than the 80S human cytosolic ribosome.",
+     "Bacterial DNA enzymes and folate synthesis are also targeted because human cells differ. Cell membranes can be targeted, but selectivity is harder.",
+     "Remember: selective toxicity hits a bacterial feature humans lack or do differently."
+    ]
+   },
+   {
+    "h": "Therapeutic index & spectrum",
+    "items": [
+     "Therapeutic index (TI) = toxic dose / effective dose (commonly TD50/ED50). High TI = wider safety margin; low TI = narrower margin (monitoring may be needed).",
+     "Some multidrug-resistant infections must be treated with lower-TI drugs that have more side effects.",
+     "Narrow spectrum: active against a limited range (preferred when the pathogen and susceptibility are known). Broad spectrum: many groups (useful when the pathogen is unknown or urgent).",
+     "Remember: high TI = larger safety margin; narrow when you know the bug, broad when you do not."
+    ]
+   },
+   {
+    "h": "Bactericidal vs bacteriostatic; key exceptions",
+    "items": [
+     "Bactericidal: kills bacteria. Bacteriostatic: inhibits growth so host defenses can clear the infection.",
+     "Mycoplasma pneumoniae has NO cell wall, so penicillin and other cell-wall-targeting beta-lactams do not work.",
+     "Viruses lack the bacterial targets of antibiotics - antibiotics do NOT treat the common cold (it is viral).",
+     "Remember: no cell wall (Mycoplasma) or no bacterial target (viruses) means beta-lactams/antibiotics fail."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_bio20_resistance",
+  "subjectId": "bio",
+  "chapterId": "bio20",
+  "topicId": "resistance",
+  "title": "Antibiotic resistance",
+  "overview": "Know the four resistance mechanisms, how bacteria acquire resistance, and how to slow it.",
+  "sections": [
+   {
+    "h": "The four major mechanisms",
+    "items": [
+     "1. Drug inactivation: enzymes destroy or modify the drug (e.g., beta-lactamases) - break the drug.",
+     "2. Altered target: mutation/modification makes the drug bind poorly - change the lock.",
+     "3. Decreased uptake: membrane or porin changes reduce drug entry - keep it out.",
+     "4. Increased efflux: pumps eject the drug; some act on many drug classes - pump it out.",
+     "Trap: DECREASED efflux does not explain resistance; INCREASED (multidrug) efflux can resist several unrelated antibiotics.",
+     "Remember: break the drug, change the lock, keep it out, pump it out."
+    ]
+   },
+   {
+    "h": "How bacteria acquire resistance",
+    "items": [
+     "Spontaneous mutations: DNA changes may create resistance before exposure.",
+     "Horizontal gene transfer: resistance genes spread by conjugation (cell-to-cell, e.g., an R-plasmid through a pilus), transformation (free DNA), or transduction (phage-mediated).",
+     "Selection by antibiotics: susceptible bacteria die; resistant variants (already present or newly arising) survive and multiply. Antibiotics do not teach resistance - they select for it.",
+     "Remember: resistance is selected for; the survivors multiply."
+    ]
+   },
+   {
+    "h": "How to slow resistance",
+    "items": [
+     "Use antibiotics only when indicated for a bacterial infection, with the right drug, dose and duration.",
+     "Follow the prescribed schedule; do not stop or change antibiotics without medical advice.",
+     "Practice infection prevention, vaccination, hand hygiene and hospital precautions; limit unnecessary use in humans and animals; use lab susceptibility results to guide treatment.",
+     "Remember: right drug, full course, prevent spread, test susceptibility."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ST_bio20_mic",
+  "subjectId": "bio",
+  "chapterId": "bio20",
+  "topicId": "mic",
+  "title": "MIC, Kirby-Bauer & tough pathogens",
+  "overview": "Know how MIC and Kirby-Bauer measure susceptibility, and why TB and eukaryotic pathogens are hard to treat.",
+  "sections": [
+   {
+    "h": "MIC and Kirby-Bauer",
+    "items": [
+     "MIC (minimum inhibitory concentration): the lowest antimicrobial concentration that prevents visible growth under the test conditions.",
+     "Dilution series: the drug concentration decreases across the row; the last CLEAR tube before visible growth is the MIC. Example: Organism A MIC 0.12 ug/mL vs B 1.0 ug/mL - A has the lower MIC (more susceptible).",
+     "Kirby-Bauer disk diffusion: disks on a bacterial lawn create a zone of inhibition; measure the diameter and compare to standardized breakpoints to report susceptible, intermediate, or resistant. Zone size alone is not comparable between unrelated antibiotics.",
+     "Remember: MIC = the last clear tube; a bigger zone means more inhibited (within one drug's breakpoints)."
+    ]
+   },
+   {
+    "h": "Tuberculosis & tough pathogens",
+    "items": [
+     "Mycobacterium tuberculosis grows slowly and has a lipid-rich, mycolic-acid cell wall that reduces drug penetration. It DOES contain peptidoglycan (the claim that mycobacteria have none is false).",
+     "Drug-susceptible active TB is often treated with multiple drugs over about six months (combining drugs lowers resistance risk); multidrug-resistant TB needs susceptibility-guided treatment.",
+     "Eukaryotic pathogens (protozoa, helminths) resemble human cells, so selective toxicity is harder. Microtubule inhibitors can affect eukaryotic parasites, not bacteria like Staphylococcus aureus.",
+     "Remember: TB's slow growth + waxy mycolic-acid wall make it hard to treat."
+    ]
+   }
+  ]
  }
 ];

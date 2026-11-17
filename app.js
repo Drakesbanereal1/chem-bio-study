@@ -160,7 +160,19 @@
       { id:"bio9", label:"Chapter 9 - Biotechnology", topics:[
         { id:"all", label:"Biotechnology (PCR, cloning, sequencing)" } ] },
       { id:"bio10", label:"Chapter 10 - Classification & Identification", topics:[
-        { id:"all", label:"Classification & identification" } ] }
+        { id:"all", label:"Classification & identification" } ] },
+      { id:"bio13", label:"Chapter 13 - Viruses", topics:[
+        { id:"structure", label:"Virus structure & classification" },
+        { id:"replication", label:"Virus replication & lytic cycle" },
+        { id:"genetics", label:"Viral genetics, antigen changes & prions" } ] },
+      { id:"bio19", label:"Chapter 19 - Epidemiology", topics:[
+        { id:"patterns", label:"Disease patterns & rates" },
+        { id:"spread", label:"How diseases spread" },
+        { id:"public", label:"Eradication & public health" } ] },
+      { id:"bio20", label:"Chapter 20 - Antimicrobial Treatment", topics:[
+        { id:"toxicity", label:"Selective toxicity & spectrum" },
+        { id:"resistance", label:"Antibiotic resistance" },
+        { id:"mic", label:"MIC, Kirby-Bauer & tough pathogens" } ] }
     ] }
   };
   var SUBJECT_ORDER = ["chem", "bio"];
