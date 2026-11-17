@@ -1127,6 +1127,16 @@ window.STUDY_DATA = [
      "Exam cue: if the viral mRNA is complementary to the genome, the genome is negative-sense.",
      "Remember: ribosomes read (+)-sense mRNA; a (-) genome has to make a (+) copy first."
     ]
+   },
+   {
+    "h": "From the textbook: structure & classification details",
+    "items": [
+     "Capsids are made of protein subunits (capsomeres) - not DNA, RNA or lipid.",
+     "Classification is based on nucleic acid type, strandedness, capsid shape and host infected - NOT the SIZE of the virus.",
+     "Enveloped viruses get their lipid membrane from the host (often by budding). Non-enveloped (naked) viruses are generally MORE resistant to disinfectants because they have no vulnerable lipid envelope.",
+     "Viral titers are measured by plaque assays (plaque-forming units) for phages and quantal assays / ID50 for many animal viruses.",
+     "Remember: shape and genome classify a virus, not its size; naked viruses resist disinfectants better."
+    ]
    }
   ]
  },
@@ -1168,6 +1178,16 @@ window.STUDY_DATA = [
      "Latent infection: the genome persists with little/no virus production and can reactivate later (HSV, varicella-zoster). Persistent infection keeps making particles over a long time - different from true latency.",
      "Remember: animal viruses uncoat inside the cell; latency = a quiet genome that can reactivate."
     ]
+   },
+   {
+    "h": "From the textbook: phage types & infection patterns",
+    "items": [
+     "Every phage must inject its nucleic acid into a host and have it replicate there - phages cannot multiply without living bacteria.",
+     "Temperate phages can lyse the host, integrate as a prophage, become prophages, and change host traits (lysogenic conversion) - but they do NOT bud (budding is how some enveloped animal viruses exit).",
+     "Filamentous phages are extruded (released) from the host cell, often without lysing it.",
+     "Acute infection = a productive infection that usually gives long-lasting immunity. Persistent infection = virus made over a long period (chronic or latent). Latent = genome present with little/no production, able to reactivate.",
+     "Remember: acute = productive + immunity; latent/persistent = long-term or reactivatable."
+    ]
    }
   ]
  },
@@ -1203,6 +1223,16 @@ window.STUDY_DATA = [
      "Lysogenic conversion: a prophage gives the bacterium a new trait (e.g., the ability to make certain toxins).",
      "Prions are misfolded infectious PROTEINS (no DNA or RNA). The abnormal form (PrP-Sc) makes normal PrP-C misfold; accumulating abnormal protein damages brain tissue.",
      "Remember: a prion is a protein-only infectious agent with no nucleic acid."
+    ]
+   },
+   {
+    "h": "From the textbook: tumor viruses, retroviruses & RNA error",
+    "items": [
+     "Oncogenes are cancer-causing genes; proto-oncogenes are the normal cellular genes that can become oncogenes when mutated or dysregulated (sometimes by tumor viruses).",
+     "RNA viruses and retroviruses mutate faster than DNA viruses because their polymerases lack proofreading - this drives antigenic drift and drug resistance. (Exception: SARS-CoV-2 replicase has proofreading, so it mutates more slowly than most RNA viruses.)",
+     "Retroviruses use reverse transcriptase to make DNA that integrates as a PROVIRUS; proviruses underlie persistent/latent infections such as HIV.",
+     "Why influenza vaccines change yearly: its RNA genome mutates (drift), so gradually changing antigens point to an RNA genome.",
+     "Remember: no proofreading -> RNA viruses mutate fast; retroviruses integrate as a provirus."
     ]
    }
   ]
@@ -1242,6 +1272,15 @@ window.STUDY_DATA = [
      "The town's rate is 20x higher despite the same case count.",
      "Remember: divide cases by the population at risk before comparing - compare rates, not raw counts."
     ]
+   },
+   {
+    "h": "From the textbook: rates, case definitions & herd immunity",
+    "items": [
+     "Attack rate: the proportion of an exposed group that becomes ill. Case-fatality rate: the proportion of cases that die. Infection-fatality rate: the proportion of ALL infected (including asymptomatic) that die.",
+     "Case definition: the standard criteria used to count a case. Index case: the FIRST case in an outbreak.",
+     "Herd immunity: when enough of a population is immune, spread is limited and non-immune people are indirectly protected (it is NOT avoiding a risky behavior).",
+     "Remember: attack rate = of the exposed; case-fatality = of the cases; herd immunity = enough immune people block spread."
+    ]
    }
   ]
  },
@@ -1277,6 +1316,17 @@ window.STUDY_DATA = [
      "A long incubation can complicate outbreak control because infected people may travel/interact before symptoms appear. But a long incubation alone does not guarantee contagiousness.",
      "Remember: symptoms can appear long after exposure, which makes tracking harder."
     ]
+   },
+   {
+    "h": "From the textbook: chain of infection & transmission detail",
+    "items": [
+     "Chain of infection: reservoir -> portal of exit -> transmission -> portal of entry -> susceptible host. Breaking any link stops spread.",
+     "Portals of exit/entry include respiratory droplets, feces (fecal-oral through the mouth), skin cells, genital secretions and urine. An organism can be harmless at one body site but cause disease at another.",
+     "Vertical transmission: parent to offspring (e.g., congenital syphilis, mother to fetus). Horizontal transmission: everything else - direct contact, droplet, airborne, vehicle (food/water), vector.",
+     "A mechanical vector carries a microbe on its body; a biological vector lets the pathogen multiply inside it (e.g., a mosquito).",
+     "Airborne transmission (small droplet nuclei that stay suspended) is the HARDEST to control - droplet nuclei do NOT fall quickly to the ground.",
+     "Remember: airborne is hardest to control; vertical = parent-to-offspring; biological vector = pathogen multiplies in it."
+    ]
    }
   ]
  },
@@ -1305,6 +1355,16 @@ window.STUDY_DATA = [
      "Historical drops in infectious-disease mortality came largely from clean water, sewage treatment, food safety, better living conditions, sanitation and vector control - even before antibiotics.",
      "Google Flu Trends lesson: internet searches can hint at trends but are biased, imprecise, media-influenced, and missing where access is limited. Search activity is NOT the same as confirmed infections.",
      "Remember: animal reservoirs and environmental spores make eradication hard; sanitation cut deaths before antibiotics."
+    ]
+   },
+   {
+    "h": "From the textbook: study types, surveillance & emergence",
+    "items": [
+     "Descriptive studies find patterns (person/place/time) and tell a common-source epidemic from a propagated one. Analytical studies find which risk factors matter: case-control (compare cases vs controls' past exposures), cross-sectional (a snapshot of a population), cohort (follow groups over time). Experimental studies test an intervention.",
+     "Surveillance: the CDC supports US public health and runs the NNDSS for notifiable diseases; the WHO coordinates globally.",
+     "Smallpox is the only human disease eradicated; rinderpest is the only animal disease eradicated.",
+     "Emerging/reemerging diseases are driven by microbial evolution, misinformation/complacency, antimicrobial overuse, societal and technological change, population growth, mass food production/import, war, and climate change. Widespread VACCINATION is NOT a driver of emergence (it reduces disease).",
+     "Remember: case-control looks back, cohort looks forward; CDC/NNDSS/WHO run surveillance; vaccination fights emergence, it does not cause it."
     ]
    }
   ]
@@ -1342,6 +1402,16 @@ window.STUDY_DATA = [
      "Mycoplasma pneumoniae has NO cell wall, so penicillin and other cell-wall-targeting beta-lactams do not work.",
      "Viruses lack the bacterial targets of antibiotics - antibiotics do NOT treat the common cold (it is viral).",
      "Remember: no cell wall (Mycoplasma) or no bacterial target (viruses) means beta-lactams/antibiotics fail."
+    ]
+   },
+   {
+    "h": "From the textbook: drug targets & mechanism classes",
+    "items": [
+     "Most selective target = peptidoglycan synthesis (humans have no peptidoglycan). Beta-lactams (penicillins, cephalosporins, carbapenems, monobactams) block cell-wall cross-linking by binding penicillin-binding proteins (PBPs).",
+     "Protein-synthesis drugs: those binding the 50S ribosome include macrolides, chloramphenicol and lincosamides; those binding the 30S include aminoglycosides and tetracyclines.",
+     "Nucleic-acid drugs: fluoroquinolones target DNA gyrase/topoisomerase (NOT the ribosome). Metabolic: sulfonamides + trimethoprim block folate synthesis (combined as co-trimoxazole, a synergistic pair).",
+     "A LOWER therapeutic index means MORE toxic (a narrower safe range), not less. Combinations can be synergistic, additive, or antagonistic; broad-spectrum use can cause Clostridioides difficile infection (dysbiosis).",
+     "Remember: peptidoglycan = most selective target; 50S vs 30S for ribosome drugs; low TI = more toxic."
     ]
    }
   ]
@@ -1382,6 +1452,15 @@ window.STUDY_DATA = [
      "Practice infection prevention, vaccination, hand hygiene and hospital precautions; limit unnecessary use in humans and animals; use lab susceptibility results to guide treatment.",
      "Remember: right drug, full course, prevent spread, test susceptibility."
     ]
+   },
+   {
+    "h": "From the textbook: acquired resistance & MRSA",
+    "items": [
+     "Acquired resistance arises by spontaneous mutation or horizontal gene transfer; the most common transfer is conjugative transfer of R plasmids.",
+     "Mechanisms: enzymes modify/destroy the drug, an altered target binds poorly, altered porins reduce uptake, and efflux pumps remove the drug.",
+     "MRSA = methicillin-resistant Staphylococcus aureus. HA-MRSA resists methicillin, penicillin and most cephalosporins but is usually still treated with vancomycin; it is a major cause of hard-to-treat healthcare infections.",
+     "Remember: R plasmids spread resistance by conjugation; HA-MRSA is still sensitive to vancomycin."
+    ]
    }
   ]
  },
@@ -1409,6 +1488,16 @@ window.STUDY_DATA = [
      "Drug-susceptible active TB is often treated with multiple drugs over about six months (combining drugs lowers resistance risk); multidrug-resistant TB needs susceptibility-guided treatment.",
      "Eukaryotic pathogens (protozoa, helminths) resemble human cells, so selective toxicity is harder. Microtubule inhibitors can affect eukaryotic parasites, not bacteria like Staphylococcus aureus.",
      "Remember: TB's slow growth + waxy mycolic-acid wall make it hard to treat."
+    ]
+   },
+   {
+    "h": "From the textbook: MIC vs MBC, TB drugs & antivirals",
+    "items": [
+     "MIC: the lowest concentration that prevents visible growth. MBC: the lowest concentration that KILLS 99.9% of cells. Kirby-Bauer disk diffusion reports susceptible / intermediate / resistant from the zone of inhibition.",
+     "TB first-line drugs: isoniazid, ethambutol, pyrazinamide (with rifampin). Routine therapy uses drug COMBINATIONS for at least about 4-6 months (often longer) because M. tuberculosis grows slowly and resists easily.",
+     "Antivirals are harder to design (viruses use host machinery). They block entry/uncoating (amantadine blocks influenza uncoating), nucleic-acid synthesis (acyclovir is a nucleoside analog), integration (integrase inhibitors), or assembly/release (protease and neuraminidase inhibitors).",
+     "Antifungals: azoles and polyenes target ergosterol in fungal membranes; griseofulvin concentrates in keratinized tissue to treat nail/skin infections.",
+     "Remember: MIC stops growth, MBC kills; TB needs long drug combinations; acyclovir = nucleoside analog."
     ]
    }
   ]
